@@ -1,5 +1,6 @@
-import { Tile, Image, ImageWrapper, Title, Year, Genres, Genre, Votes, Vote } from "./styled";
-import poster from "./poster.png"
+import { Tile, Image, ImageWrapper, Description, Title, Year, Genres, Genre, Votes, Vote, Star } from "./styled";
+import poster from "./poster.png";
+import star from "./star.svg";
 
 export const MovieTile = () => (
   <>
@@ -7,7 +8,7 @@ export const MovieTile = () => (
       <ImageWrapper>
         <Image alt="moviePoster" src={poster} />
       </ImageWrapper>
-      <div>
+      <Description>
         <Title>Mulan</Title>
         <Year>2020</Year>
         <Genres>
@@ -16,11 +17,11 @@ export const MovieTile = () => (
           <Genre>Drama</Genre>
         </Genres>
         <Votes>
-          <Vote star><img className="star" src="./star.svg" alt="" /></Vote>
+          <Vote><Star src={star} alt="" /></Vote>
           <Vote>7,7</Vote>
           <Vote amount>35 votes</Vote>
         </Votes>
-      </div>
+      </Description>
     </Tile>
   </>
 );
