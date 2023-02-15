@@ -18,7 +18,7 @@ export const MovieTile = () => (
         </Genres>
         <Votes>
           <Vote><Star src={star} alt="" /></Vote>
-          <Vote>7,7</Vote>
+          <Vote average>7,7</Vote>
           <Vote count>35 votes</Vote>
         </Votes>
       </Description>
