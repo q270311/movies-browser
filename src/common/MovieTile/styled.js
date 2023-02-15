@@ -11,7 +11,7 @@ export const Tile = styled.div`
   border-radius: 5px;
   padding: 16px;
 
-  @media (max-width: 800px) {
+  @media (max-width: 400px) {
     min-width: 288px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -23,6 +23,10 @@ export const Image = styled.img`
   height: auto;
 `;
 
+export const ImageWrapper = styled.div`
+
+`;
+
 export const Description = styled.div`
 
 `;
@@ -32,7 +36,7 @@ export const Title = styled.h2`
   margin-top: 16px;
   margin-bottom: 8px;
 
-  @media (max-width: 600px) {
+  @media (max-width: 400px) {
     font-size: 16px;
     margin-top: 0;
 `;
@@ -55,16 +59,26 @@ export const Genre = styled.p`
   padding: 8px 16px;
   font-size: 14px;
 
-  @media (max-width: 600px) {
+  @media (max-width: 400px) {
     align-self: flex-start;
     font-size: 10px;
   }
 `;
 
 export const Votes = styled.div`
-
+  display: flex;
+  height: 100%;
+  gap: 12px;
 `;
 
 export const Vote = styled.p`
 
+`;
+
+export const Star = styled.img`
+  width: 24px;
+
+  @media (max-width: 400px) {
+    width: 16px;
+  }
 `;
