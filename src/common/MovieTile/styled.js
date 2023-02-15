@@ -51,6 +51,8 @@ export const Genres = styled.div`
   flex-wrap: wrap;
   padding: 0px;
   gap: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 `;
 
 export const Genre = styled.p`
