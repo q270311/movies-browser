@@ -18,11 +18,12 @@ export const Tile = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
-
+  margin: 16px;
 `;
 
 export const Image = styled.img`
-
+  width: 100%;
+  height: auto;
 `;
 
 export const Description = styled.div`
