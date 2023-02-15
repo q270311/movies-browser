@@ -28,7 +28,13 @@ export const Description = styled.div`
 `;
 
 export const Title = styled.h2`
+  font-size: 22px;
+  margin-top: 16px;
+  margin-bottom: 8px;
 
+  @media (max-width: 600px) {
+    font-size: 16px;
+    margin-top: 0;
 `;
 
 export const Year = styled.p`
