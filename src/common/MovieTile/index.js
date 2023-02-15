@@ -1,4 +1,4 @@
-import { Tile, ImageWrapper, Image, Description, Title, Year, Genres, Genre, Votes, Vote } from "./styled";
+import { Tile, Image, Description, Title, Year, Genres, Genre, Votes, Vote } from "./styled";
 import poster from "./poster.png"
 
 export const MovieTile = () => (
