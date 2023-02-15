@@ -9,16 +9,13 @@ export const Tile = styled.div`
   min-width: 324px;
   height: auto;
   border-radius: 5px;
+  padding: 16px;
 
   @media (max-width: 800px) {
     min-width: 288px;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-`;
-
-export const ImageWrapper = styled.div`
-  margin: 16px;
 `;
 
 export const Image = styled.img`
