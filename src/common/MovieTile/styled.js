@@ -51,7 +51,7 @@ export const Genre = styled.p`
 
   @media (max-width: 600px) {
     align-self: flex-start;
-    font-size: 13px;
+    font-size: 10px;
   }
 `;
 
