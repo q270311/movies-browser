@@ -42,7 +42,8 @@ export const Title = styled.h2`
 `;
 
 export const Year = styled.p`
-
+  color: #7E839A;
+  margin: 0;
 `;
 
 export const Genres = styled.div`
