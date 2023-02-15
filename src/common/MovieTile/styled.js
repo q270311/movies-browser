@@ -24,7 +24,12 @@ export const Image = styled.img`
 `;
 
 export const ImageWrapper = styled.div`
+  display: flex;
 
+  @media (max-width: 400px) {
+    margin-right: 16px;
+    align-items:center;
+  }
 `;
 
 export const Description = styled.div`
