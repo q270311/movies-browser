@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Tile = styled.div`
   display:flex;
@@ -80,6 +80,14 @@ export const Vote = styled.p`
     font-size: 13px;
     align-self: flex-start;
   }
+  
+  ${({ average }) => average && css`
+    font-weight: 600;
+  `}
+
+  ${({ count }) => count && css`
+    color: #7E839A;
+  `}
 `;
 
 export const Star = styled.img`
