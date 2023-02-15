@@ -19,7 +19,7 @@ export const MovieTile = () => (
         <Votes>
           <Vote><Star src={star} alt="" /></Vote>
           <Vote>7,7</Vote>
-          <Vote amount>35 votes</Vote>
+          <Vote count>35 votes</Vote>
         </Votes>
       </Description>
     </Tile>
