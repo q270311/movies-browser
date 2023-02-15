@@ -72,7 +72,14 @@ export const Votes = styled.div`
 `;
 
 export const Vote = styled.p`
+  margin: 0;
+  display: flex;
+  align-self: flex-end;
 
+  @media (max-width: 400px) {
+    font-size: 13px;
+    align-self: flex-start;
+  }
 `;
 
 export const Star = styled.img`
