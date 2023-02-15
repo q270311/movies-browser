@@ -28,7 +28,13 @@ export const ImageWrapper = styled.div`
 `;
 
 export const Description = styled.div`
+  height: 200px;
+  display: flex;
+  flex-direction: column;
 
+  @media (max-width: 400px) {
+    height: auto;
+  }
 `;
 
 export const Title = styled.h2`
