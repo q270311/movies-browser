@@ -4,6 +4,14 @@ import { ReactComponent as Vector } from "./Vector.svg"
 export const Wrapper = styled.div`
   display: inline-flex;
   gap: 8px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0 103px 0;
+
+  @media (max-width: 400px) {
+    padding-bottom: 39px;
+  }
 `;
 
 export const Button = styled.button`
