@@ -1,5 +1,5 @@
 import { StyledNavigation, NavList, NavItems } from "./styled";
-import { NavigationLink } from "../Header/styled";
+import { NavigationLink } from "../styled";
 
 const Navigation = () => {
   return (
