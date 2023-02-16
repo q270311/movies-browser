@@ -81,4 +81,10 @@ export const Text = styled.span`
 `;
 
 export const PageText = styled.span`
+  align-self: center;
+  font-weight: 600;
+
+  @media (max-width: 400px) {
+    font-size: 10px;
+  }
 `;
