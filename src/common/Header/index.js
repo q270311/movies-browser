@@ -1,10 +1,12 @@
-import { StyledHeader } from "./styled";
+import { Container, StyledHeader } from "./styled";
 
 
 const Header = () => {
     return (
         <StyledHeader>
-            
+            <Container>
+                
+            </Container>
         </StyledHeader>
     );
 };
