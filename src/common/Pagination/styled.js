@@ -14,8 +14,10 @@ export const Button = styled.button`
   padding: 8px 16px;
   font-size: 14px;
   background-color: #D6E4FF;
+  color: #333333;
   border-radius: 5px;
   border: none;
+  cursor: pointer;
 
   &:disabled {
     background-color: #E4E6F0;
