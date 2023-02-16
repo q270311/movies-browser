@@ -28,6 +28,6 @@ font-size: 24px;
 line-height: 40px;
 letter-spacing: -1.5px;
 text-transform: capitalize;
-color: #FFFFFF;
+color: ${({ theme }) => theme.color.white};
 margin: 0;
 `;
