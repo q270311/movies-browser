@@ -1,10 +1,10 @@
+import Navigation from "./Navigation";
 import {
   Container,
   StyledHeader,
   Video,
   Title,
   NavigationLink,
-  StyledNavigation,
 } from "./styled";
 import video from "./video.svg";
 
@@ -16,9 +16,7 @@ const Header = () => {
           <Video src={video} />
           <Title>Movies Browser</Title>
         </NavigationLink>
-        <StyledNavigation>
-            
-        </StyledNavigation>
+        <Navigation />
       </Container>
     </StyledHeader>
   );
