@@ -13,7 +13,7 @@ const Header = () => {
       <Container>
         <NavigationLink>
           <Video src={video} />
-          <Title>Movie Browser</Title>
+          <Title>Movies Browser</Title>
         </NavigationLink>
       </Container>
     </StyledHeader>
