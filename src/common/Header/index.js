@@ -1,14 +1,14 @@
-import { Container, StyledHeader } from "./styled";
-
+import { Container, StyledHeader, Video } from "./styled";
+import video from "./video.svg";
 
 const Header = () => {
-    return (
-        <StyledHeader>
-            <Container>
-                
-            </Container>
-        </StyledHeader>
-    );
+  return (
+    <StyledHeader>
+      <Container>
+        <Video src={video} />
+      </Container>
+    </StyledHeader>
+  );
 };
 
 export default Header;
