@@ -6,4 +6,14 @@ export const NavList = styled.ul`
   list-style-type: none;
 `;
 
-export const NavItems = styled.li``;
+export const NavItems = styled.li`
+width: 54px;
+height: 21px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 21px;
+text-transform: uppercase;
+color: ${({ theme }) => theme.color.white};
+`;
