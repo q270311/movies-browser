@@ -4,25 +4,25 @@ export const Pagination = () => {
   return (
     <Wrapper>
       <Button>
-        <StyledVector/>
-        <StyledVector/>
+        <StyledVector />
+        <StyledVector />
         First
       </Button>
       <Button>
-      <StyledVector/>
-      <StyledVector/>
+        <StyledVector />
+        <StyledVector />
         Previous
       </Button>
       <p></p>
       <Button>
-      <StyledVector/>
-      <StyledVector/>
         Next
+        <StyledVector right="true" />
+        <StyledVector right="true" />
       </Button>
       <Button>
-      <StyledVector/>
-      <StyledVector/>
         Last
+        <StyledVector right="true" />
+        <StyledVector right="true" />
       </Button>
     </Wrapper>
   )
