@@ -1,16 +1,19 @@
 import styled from "styled-components";
 
 export const StyledHeader = styled.header`
+display: flex;
 width: 1920px;
 height: 94px;
 background: ${({ theme }) => theme.color.black};
 `;
 
 export const Container = styled.div`
+display: flex;
 `;
 
 export const Video = styled.img`
-
+width: 40px;
+height: 40px;
 `;
 
 export const Title = styled.h1`
@@ -24,4 +27,5 @@ line-height: 40px;
 letter-spacing: -1.5px;
 text-transform: capitalize;
 color: #FFFFFF;
+margin: 0;
 `;
