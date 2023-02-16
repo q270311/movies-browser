@@ -33,8 +33,7 @@ export const Title = styled.h1`
 `;
 
 export const NavigationLink = styled(NavLink)`
-display: flex;
+  display: flex;
   text-decoration: none;
   gap: 16px;
 `;
-
