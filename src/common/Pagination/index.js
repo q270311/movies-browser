@@ -5,7 +5,7 @@ export const Pagination = () => {
     <Wrapper>
       <Button>
         <StyledVector />
-        <StyledVector nomobile="true" />
+        <StyledVector mobile="true" />
         <ButtonText>First</ButtonText>
       </Button>
       <Button>
@@ -20,7 +20,7 @@ export const Pagination = () => {
       <Button>
         <ButtonText> Last</ButtonText>
         <StyledVector right="true" />
-        <StyledVector right="true" nomobile="true" />
+        <StyledVector right="true" mobile="true" />
       </Button>
     </Wrapper>
   )

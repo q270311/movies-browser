@@ -40,7 +40,7 @@ export const StyledVector = styled(Vector)`
     transform: rotate(180deg);
   `}
 
-  ${({ nomobile }) => nomobile && css`
+  ${({ mobile }) => mobile && css`
   display: none;
   
   @media (max-width: 400px) {
