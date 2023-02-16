@@ -37,3 +37,7 @@ display: flex;
   text-decoration: none;
   gap: 16px;
 `;
+
+export const StyledNavigation = styled.nav`
+
+`;
