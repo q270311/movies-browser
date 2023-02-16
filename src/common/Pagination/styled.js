@@ -16,6 +16,12 @@ export const Button = styled.button`
   background-color: #D6E4FF;
   border-radius: 5px;
   border: none;
+
+  &:disabled {
+    background-color: #E4E6F0;
+    color: #18181B;
+    cursor: default;
+  }
 `;
 
 export const StyledVector = styled(Vector)`
@@ -33,6 +39,10 @@ export const StyledVector = styled(Vector)`
   @media (max-width: 400px) {
     display: block;
   }
+  `}
+
+  ${({ disabled }) => disabled && css`
+    fill: #7E839A;
   `}
 `;
 
