@@ -18,11 +18,21 @@ export const Button = styled.button`
   border-radius: 5px;
   border: none;
   cursor: pointer;
+  transition: 0.3s;
+  
+  &:hover {
+      filter: brightness(105%);
+      transform: scale(1.01);
+  }
 
   &:disabled {
     background-color: #E4E6F0;
     color: #18181B;
     cursor: default;
+
+    &:hover {
+      filter: none;
+    }
   }
 `;
 
@@ -41,11 +51,11 @@ export const StyledVector = styled(Vector)`
   `}
 
   ${({ mobile }) => mobile && css`
-  display: none;
+    display: none;
   
-  @media (max-width: 400px) {
-    display: block;
-  }
+    @media (max-width: 400px) {
+      display: block;
+    }
   `}
 
   ${({ disabled }) => disabled && css`
