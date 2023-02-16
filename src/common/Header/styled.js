@@ -41,3 +41,7 @@ display: flex;
 export const StyledNavigation = styled.nav`
 
 `;
+
+export const NavList = styled.ul`
+
+`;
