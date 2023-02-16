@@ -1,4 +1,4 @@
-import { Container, StyledHeader, Video } from "./styled";
+import { Container, StyledHeader, Video, Title } from "./styled";
 import video from "./video.svg";
 
 const Header = () => {
@@ -6,6 +6,7 @@ const Header = () => {
     <StyledHeader>
       <Container>
         <Video src={video} />
+        <Title>Movies Browser</Title>
       </Container>
     </StyledHeader>
   );
