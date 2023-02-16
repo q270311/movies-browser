@@ -21,8 +21,8 @@ export const Button = styled.button`
   transition: 0.3s;
   
   &:hover {
-      filter: brightness(105%);
-      transform: scale(1.01);
+    filter: brightness(105%);
+    transform: scale(1.01);
   }
 
   &:disabled {
@@ -69,4 +69,16 @@ export const ButtonText = styled.span`
   @media (max-width: 400px) {
     display: none;
   }
+`;
+
+export const Text = styled.span`
+  align-self: center;
+  color: #7E839A;
+
+  @media (max-width: 400px) {
+    font-size: 10px;
+  }
+`;
+
+export const PageText = styled.span`
 `;
