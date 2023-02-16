@@ -31,6 +31,11 @@ export const StyledVector = styled(Vector)`
   height: 11px;
   fill: #0044CC;
 
+  @media (max-width: 400px) {
+    width: 5px;
+    height: 8px;
+  }
+
   ${({ right }) => right && css`
     transform: rotate(180deg);
   `}
