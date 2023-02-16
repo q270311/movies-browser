@@ -24,6 +24,14 @@ export const StyledVector = styled(Vector)`
   fill: #0044CC;
 
   ${({ right }) => right && css`
-  transform: rotate(180deg);
-`}
+    transform: rotate(180deg);
+  `}
+`;
+
+export const ButtonText = styled.span`
+  display: block;
+
+  @media (max-width: 400px) {
+    display: none;
+  }
 `;
