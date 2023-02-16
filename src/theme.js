@@ -1,5 +1,7 @@
 export const theme = {
-  color: {},
+  color: {
+    black: "#18181B",
+  },
   breakpoint: {
     mobileDevice: 767,
   },
