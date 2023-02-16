@@ -1,28 +1,26 @@
-import { Wrapper, Button, StyledVector } from "./styled";
+import { Wrapper, Button, StyledVector, ButtonText } from "./styled";
 
 export const Pagination = () => {
   return (
     <Wrapper>
       <Button>
         <StyledVector />
-        <StyledVector />
-        First
+        <StyledVector nomobile="true" />
+        <ButtonText>First</ButtonText>
       </Button>
       <Button>
         <StyledVector />
-        <StyledVector />
-        Previous
+        <ButtonText> Previous</ButtonText>
       </Button>
       <p></p>
       <Button>
-        Next
-        <StyledVector right="true" />
+        <ButtonText> Next</ButtonText>
         <StyledVector right="true" />
       </Button>
       <Button>
-        Last
+        <ButtonText> Last</ButtonText>
         <StyledVector right="true" />
-        <StyledVector right="true" />
+        <StyledVector right="true" nomobile="true" />
       </Button>
     </Wrapper>
   )
