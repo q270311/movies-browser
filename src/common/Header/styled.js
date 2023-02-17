@@ -13,6 +13,7 @@ export const StyledHeader = styled.header`
 export const Container = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
 `;
 
 export const Video = styled.img`
@@ -36,7 +37,6 @@ export const MovieTitle = styled.h1`
 
 export const NavigationLink = styled(NavLink)`
   display: flex;
-  justify-content: start;
   text-decoration: none;
   gap: 16px;
 `;
