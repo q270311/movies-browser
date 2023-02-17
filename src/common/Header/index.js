@@ -13,7 +13,7 @@ const Header = () => {
   return (
     <StyledHeader>
       <Container>
-        <NavigationLink>
+        <NavigationLink to="/movies-list">
           <Video src={video} />
           <Title>Movies Browser</Title>
         </NavigationLink>

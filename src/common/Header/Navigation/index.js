@@ -5,10 +5,10 @@ const Navigation = () => {
   return (
     <StyledNavigation>
       <NavList>
-        <NavigationLink>
+        <NavigationLink to="/movies-list">
           <NavItems>Movies</NavItems>
         </NavigationLink>
-        <NavigationLink>
+        <NavigationLink to="/people-list">
           <NavItems>People</NavItems>
         </NavigationLink>
       </NavList>
