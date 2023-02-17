@@ -8,6 +8,7 @@ export const NavList = styled.ul`
 `;
 
 export const NavItems = styled.li`
+  padding-right: 64px;
   width: 54px;
   height: 21px;
   font-family: "Poppins";
