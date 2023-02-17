@@ -4,6 +4,7 @@ export const StyledNavigation = styled.nav``;
 
 export const NavList = styled.ul`
   display: flex;
+  align-items: center;
   list-style-type: none;
   padding: 0 411px 0 104px;
 `;
