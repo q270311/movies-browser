@@ -11,7 +11,7 @@ export const SearchInput = styled.input`
   background-color: transparent;
   outline: 0;
   padding: 0;
-  width: 155px;
+  width: 100%;
   height: 24px;
 `;
 
