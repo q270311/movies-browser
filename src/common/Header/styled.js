@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 export const StyledHeader = styled.header`
   display: flex;
+  padding: 16px;
   width: 100%;
   height: 94px;
   background: ${({ theme }) => theme.color.black};
@@ -34,6 +35,7 @@ export const Title = styled.h1`
 
 export const NavigationLink = styled(NavLink)`
   display: flex;
+  justify-content: start;
   text-decoration: none;
   gap: 16px;
 `;
