@@ -6,7 +6,7 @@ const Navigation = () => {
     <StyledNavigation>
       <NavList>
         <NavigationLink to="/movies-list">
-          <NavItems>Movies</NavItems>
+          <NavItems primary>Movies</NavItems>
         </NavigationLink>
         <NavigationLink to="/people-list">
           <NavItems>People</NavItems>
