@@ -6,11 +6,11 @@ export const NavList = styled.ul`
   display: flex;
   align-items: center;
   list-style-type: none;
-  padding: 0 411px 0 104px;
+  padding: 0 311px 0 104px;
 `;
 
 export const NavItems = styled.li`
-  padding-right: 64px;
+  padding: 0 35px 0 40px;
   width: 54px;
   height: 21px;
   font-family: "Poppins";
