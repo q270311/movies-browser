@@ -5,7 +5,7 @@ export const StyledNavigation = styled.nav``;
 export const NavList = styled.ul`
   display: flex;
   list-style-type: none;
-  padding-left: 104px;
+  padding: 0 411px 0 104px;
 `;
 
 export const NavItems = styled.li`
