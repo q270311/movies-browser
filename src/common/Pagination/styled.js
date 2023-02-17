@@ -21,8 +21,8 @@ export const Button = styled.button`
   gap: 8px;
   padding: 8px 16px;
   font-size: 14px;
-  background-color: #D6E4FF;
-  color: #333333;
+  background-color: ${({ theme }) => theme.color.pattensBlue};
+  color: ${({ theme }) => theme.color.mine};
   border-radius: 5px;
   border: none;
   cursor: pointer;
@@ -34,8 +34,8 @@ export const Button = styled.button`
   }
 
   &:disabled {
-    background-color: #E4E6F0;
-    color: #18181B;
+    background-color: ${({ theme }) => theme.color.mystic};
+    color: ${({ theme }) => theme.color.woodsmoke};
     cursor: default;
 
     &:hover {
@@ -47,7 +47,7 @@ export const Button = styled.button`
 export const StyledVector = styled(Vector)`
   width: 7px;
   height: 11px;
-  fill: #0044CC;
+  fill: ${({ theme }) => theme.color.blue};
 
   @media (max-width: 400px) {
     width: 5px;
@@ -67,7 +67,7 @@ export const StyledVector = styled(Vector)`
   `}
 
   ${({ disabled }) => disabled && css`
-    fill: #7E839A;
+    fill: ${({ theme }) => theme.color.waterloo};
   `}
 `;
 
@@ -81,7 +81,7 @@ export const ButtonText = styled.span`
 
 export const Text = styled.span`
   align-self: center;
-  color: #7E839A;
+  color: ${({ theme }) => theme.color.waterloo};
 
   @media (max-width: 400px) {
     font-size: 10px;
