@@ -12,4 +12,5 @@ export const SearchWrapper = styled.div`
   background: ${({ theme }) => theme.color.white};
   border: 1px solid ${({ theme }) => theme.color.grey};
   border-radius: 33px;
+  max-width: 432px;
 `;
