@@ -11,7 +11,7 @@ export const Tile = styled.div`
   border-radius: 5px;
   padding: 16px;
 
-  @media (max-width: 400px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
     min-width: 288px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -26,7 +26,7 @@ export const Image = styled.img`
 export const ImageWrapper = styled.div`
   display: flex;
 
-  @media (max-width: 400px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
     margin-right: 16px;
     align-items:center;
   }
@@ -37,7 +37,7 @@ export const Description = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media (max-width: 400px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
     height: auto;
   }
 `;
@@ -49,7 +49,7 @@ export const Title = styled.h2`
   font-weight: 500;
   word-break: break-word;
   
-  @media (max-width: 400px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
     font-size: 16px;
     margin-top: 0;
     margin-bottom: 4px;
@@ -76,7 +76,7 @@ export const Genre = styled.p`
   padding: 8px 16px;
   font-size: 14px;
 
-  @media (max-width: 400px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
     align-self: flex-start;
     font-size: 10px;
     padding: 4px 8px;
@@ -94,7 +94,7 @@ export const Vote = styled.p`
   display: flex;
   align-self: flex-end;
 
-  @media (max-width: 400px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
     font-size: 13px;
     align-self: flex-start;
   }
@@ -111,7 +111,7 @@ export const Vote = styled.p`
 export const Star = styled.img`
   width: 24px;
 
-  @media (max-width: 400px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
     width: 16px;
   }
 `;
