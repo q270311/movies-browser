@@ -17,7 +17,7 @@ export const SearchInput = styled.input`
 
 export const SearchIcon = styled.img`
   padding: 0 19px 0 27px;
-  height: 17.98px;
+  height: 18px;
   color: ${({ theme }) => theme.color.grey};
 `;
 
