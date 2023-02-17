@@ -1,4 +1,5 @@
 import Navigation from "./Navigation";
+import Search from "./Search";
 import {
   Container,
   StyledHeader,
@@ -17,6 +18,7 @@ const Header = () => {
           <Title>Movies Browser</Title>
         </NavigationLink>
         <Navigation />
+        <Search />
       </Container>
     </StyledHeader>
   );
