@@ -31,7 +31,7 @@ export const NavItems = styled.li`
       gap: 10px;
       width: 102px;
       height: 48px;
-      border: 1px solid #ffffff;
+      border: 1px solid ${({ theme }) => theme.color.white};
       border-radius: 24px;
     `}
 `;
