@@ -10,11 +10,6 @@ export const StyledHeader = styled.header`
   background: ${({ theme }) => theme.color.black};
 `;
 
-export const Container = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
 export const Video = styled.img`
   width: 40px;
   height: 40px;
