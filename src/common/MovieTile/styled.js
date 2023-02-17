@@ -1,10 +1,10 @@
 import styled, { css } from "styled-components";
 
 export const Tile = styled.div`
-  display:flex;
+  display: flex;
   flex-direction: column;
-  background-color: white;
-  box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
+  background-color: ${({ theme }) => theme.color.white};
+  box-shadow: 0px 4px 12px ${({ theme }) => theme.color.shadow};
   margin: 16px;
   min-width: 324px;
   height: auto;
@@ -28,7 +28,7 @@ export const ImageWrapper = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
     margin-right: 16px;
-    align-items:center;
+    align-items: center;
   }
 `;
 
@@ -56,7 +56,7 @@ export const Title = styled.h2`
 `;
 
 export const Year = styled.p`
-  color: #7E839A;
+  color: ${({ theme }) => theme.color.waterloo};
   margin: 0;
 `;
 
@@ -70,7 +70,7 @@ export const Genres = styled.div`
 `;
 
 export const Genre = styled.p`
-  background-color: #E4E6F0;
+  background-color: ${({ theme }) => theme.color.mystic};
   border-radius: 5px;
   margin: 0;
   padding: 8px 16px;
@@ -104,7 +104,7 @@ export const Vote = styled.p`
   `}
 
   ${({ count }) => count && css`
-    color: #7E839A;
+    color: ${({ theme }) => theme.color.waterloo};
   `}
 `;
 
