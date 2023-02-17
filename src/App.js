@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router";
 import { toMovieDetails, toMoviesList, toPeopleList, toPersonDetails } from "./routes";
+import Header from "./common/Header";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Route path={toMoviesList()} element="{<MoviesList />}" />
         <Route path={toPeopleList()} element="{<PeopleList />}" />
       </Routes>
+      <Header/>
       <p>Movies Browser</p>
       <p>site under construction</p>
     </div>
