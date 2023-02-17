@@ -14,6 +14,6 @@ export const GlobalStyle = createGlobalStyle`
   body {
     font-family: 'Poppins', sans-serif;
     margin: 0 auto;
-    background-color: #E5E5E5;
+    background-color: ${({ theme }) => theme.color.mercury};
   }
 `;
