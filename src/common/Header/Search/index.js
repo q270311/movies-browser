@@ -1,8 +1,9 @@
+import { SearchInput } from "./styled";
 
 
 const Search = () => {
     return (
-
+        <SearchInput/>
     );
 };
 
