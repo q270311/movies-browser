@@ -20,7 +20,7 @@ export const Video = styled.img`
   height: 40px;
 `;
 
-export const Title = styled.h1`
+export const MovieTitle = styled.h1`
   width: 168px;
   height: 40px;
   font-family: "Poppins";

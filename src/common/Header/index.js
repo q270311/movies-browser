@@ -4,7 +4,7 @@ import {
   Container,
   StyledHeader,
   Video,
-  Title,
+  MovieTitle,
   NavigationLink,
 } from "./styled";
 import video from "./video.svg";
@@ -15,7 +15,7 @@ const Header = () => {
       <Container>
         <NavigationLink to="/movies-list">
           <Video src={video} />
-          <Title>Movies Browser</Title>
+          <MovieTitle>Movies Browser</MovieTitle>
         </NavigationLink>
         <Navigation />
         <Search />
