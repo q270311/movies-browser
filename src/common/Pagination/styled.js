@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
   align-items: center;
   padding: 40px 0 103px 0;
 
-  @media (max-width: 400px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
     padding-bottom: 39px;
   }
 `;
@@ -49,7 +49,7 @@ export const StyledVector = styled(Vector)`
   height: 11px;
   fill: ${({ theme }) => theme.color.blue};
 
-  @media (max-width: 400px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
     width: 5px;
     height: 8px;
   }
@@ -61,7 +61,7 @@ export const StyledVector = styled(Vector)`
   ${({ mobile }) => mobile && css`
     display: none;
   
-    @media (max-width: 400px) {
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
       display: block;
     }
   `}
@@ -74,7 +74,7 @@ export const StyledVector = styled(Vector)`
 export const ButtonText = styled.span`
   display: block;
 
-  @media (max-width: 400px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
     display: none;
   }
 `;
@@ -83,7 +83,7 @@ export const Text = styled.span`
   align-self: center;
   color: ${({ theme }) => theme.color.waterloo};
 
-  @media (max-width: 400px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
     font-size: 10px;
   }
 `;
@@ -92,7 +92,7 @@ export const PageText = styled.span`
   align-self: center;
   font-weight: 600;
 
-  @media (max-width: 400px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
     font-size: 10px;
   }
 `;
