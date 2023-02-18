@@ -17,8 +17,14 @@ export const MovieDescriptonTile = () => (
         </Subtitle>
         <AdditionalInfo />
         <Genres />
-        <Votes />
+        <VotesWrapper>
+          <Votes />
+        </VotesWrapper>
       </Description>
+      <Details>
+        A young Chinese maiden disguises herself as a male warrior in order to save her father.
+        Disguises herself as a male warrior in order to save her father.  A young Chinese maiden disguises herself as a male warrior in order to save her father.
+      </Details>
     </Tile>
   </>
 );
