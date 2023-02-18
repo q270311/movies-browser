@@ -28,3 +28,10 @@ export const Title = styled.h1`
     margin-top: 20px;
   }
 `;
+
+export const Subtitle = styled.h2`
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: 24px;
+  margin-bottom: 24px;
+`;
