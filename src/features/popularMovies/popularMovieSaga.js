@@ -1,6 +1,6 @@
 import { call, put } from "redux-saga/effects";
 import { fetchPopularMovieSuccess, fetchPopularMovieError } from "./popularMovieSlice";
-import { getMoviePopular } from "../../getDataFromMovieDatabaseAPI";
+import { getMoviePopular } from "../../getDataFromMovieDB";
 
 function* fetchMoviePopularHandler() {
     try {
