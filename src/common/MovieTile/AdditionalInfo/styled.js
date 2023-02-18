@@ -4,7 +4,7 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8px;
-  margin: 24 0 0 0;
+  margin: 24px 0 0 0;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
     margin: 8px 0 0 0;
