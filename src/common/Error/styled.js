@@ -41,3 +41,17 @@ export const Subtitle = styled.h2`
     margin-bottom: 16px;
   }
 `;
+
+export const Button = styled.button`
+  font-family: 'Open Sans', sans-serif;
+  background-color: #0044CC;
+  cursor: pointer;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 16px 24px;
+  border-radius: 5px;
+  border: none;
+  line-height: 19px;
+  transition: 0.3s;
+`;
