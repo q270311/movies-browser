@@ -1,13 +1,20 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-
-`;
-
-export const Paragraph = styled.p`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 24 0 0 0;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
     margin: 8px 0 0 0;
+  }
+`;
+
+export const Paragraph = styled.p`
+  margin: 0;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
     font-size: 12px;
-}
+  }
 `;
