@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Genres = styled.div`
+export const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   padding: 0px;
