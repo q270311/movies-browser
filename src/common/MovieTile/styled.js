@@ -75,6 +75,17 @@ export const Subtitle = styled.p`
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
     font-size: 13px;
   }
+
+  ${({ description }) => description && css`
+    color: ${({ theme }) => theme.color.black};
+    font-size: 22px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+      color: ${({ theme }) => theme.color.waterloo};
+      font-size: 13px;
+    }
+  `}
+
 `;
 
 export const VotesWrapper = styled.div`
