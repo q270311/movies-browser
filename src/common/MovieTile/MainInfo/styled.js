@@ -11,9 +11,14 @@ export const Title = styled.h2`
     font-size: 16px;
     margin-top: 0;
     margin-bottom: 4px;
+  }
 `;
 
 export const Subtitle = styled.p`
   color: ${({ theme }) => theme.color.waterloo};
   margin: 0;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+    font-size: 13px;
+  }
 `;
