@@ -1,4 +1,4 @@
-import { Wrapper, Vote, Star, Total } from "./styled";
+import { Wrapper, Vote, Star, Total, Container } from "./styled";
 import star from "./star.svg";
 
 export const Votes = () => (
@@ -44,5 +44,36 @@ export const ExtendedVotes = () => (
     >
       35 votes
     </Vote>
+  </Wrapper>
+);
+
+export const BackdropVotes = () => (
+  <Wrapper backdrop>
+    <Container>
+    <Vote>
+      <Star
+        src={star}
+        alt=""
+        backdrop
+      />
+    </Vote>
+    <Vote
+      big
+    >
+      7,7
+    </Vote>
+    <Total
+      backdrop
+    >
+      /10
+    </Total>
+    </Container>
+    <div>
+    <Vote
+      backdrop
+    >
+      35 votes
+    </Vote>
+    </div>
   </Wrapper>
 );
