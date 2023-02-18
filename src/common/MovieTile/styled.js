@@ -37,3 +37,39 @@ export const Description = styled.div`
     height: auto;
   }
 `;
+
+export const Title = styled.h2`
+  font-size: 22px;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  font-weight: 500;
+  word-break: break-word;
+  
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 4px;
+  }
+`;
+
+export const Subtitle = styled.p`
+  color: ${({ theme }) => theme.color.waterloo};
+  margin: 0;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+    font-size: 13px;
+  }
+`;
+
+export const Details = styled.div`
+  grid-column: auto; 
+  padding-top: 16px;
+  font-size: 20px;
+  margin-left: 40px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+    font-size: 14px;
+    grid-column: span 2; 
+    margin-left: 0;
+  }
+`;
