@@ -45,11 +45,3 @@ export const Year = styled.p`
   color: ${({ theme }) => theme.color.waterloo};
   margin: 0;
 `;
-
-export const Star = styled.img`
-  width: 24px;
-
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
-    width: 16px;
-  }
-`;
