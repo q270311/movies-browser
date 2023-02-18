@@ -59,4 +59,9 @@ export const Button = styled.button`
     filter: brightness(125%);
     transform: scale(1.05);
   }
+
+  @media (max-width: 400px) {
+    padding: 10px 16px;
+    font-size: 10px;
+  }
 `;
