@@ -1,8 +1,12 @@
-import { Wrapper, Paragraph } from "./styled";
+import { Wrapper, Paragraph, Attribute, Value } from "./styled";
 
 export const AdditionalInfo = () => (
   <Wrapper>
-    <Paragraph>China USA</Paragraph>
-    <Paragraph>24.10.2022</Paragraph>
+    <Paragraph>
+      <Attribute>Production:&nbsp;</Attribute>
+    </Paragraph>
+    <Paragraph>
+      <Attribute>Release date:&nbsp;</Attribute>
+    </Paragraph>
   </Wrapper>
 );
