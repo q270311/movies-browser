@@ -1,4 +1,4 @@
-import { Wrapper, ErrorIcon, Title, Subtitle } from "./styled";
+import { Wrapper, ErrorIcon, Title, Subtitle, Button } from "./styled";
 
 export const Error = () => {
   return (
@@ -10,6 +10,9 @@ export const Error = () => {
       <Subtitle>
         Please check your network connection and try again
       </Subtitle>
+      <Button>
+
+      </Button>
     </Wrapper>
   );
 };
