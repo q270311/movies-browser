@@ -1,12 +1,12 @@
-import { Title, Year } from "./styled";
+import { Title, Subtitle } from "./styled";
 
 export const MainInfo = () => (
   <>
     <Title>
       Mulan
     </Title>
-    <Year>
+    <Subtitle>
       2020
-    </Year>
+    </Subtitle>
   </>
 );

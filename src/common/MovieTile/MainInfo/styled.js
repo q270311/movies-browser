@@ -13,7 +13,7 @@ export const Title = styled.h2`
     margin-bottom: 4px;
 `;
 
-export const Year = styled.p`
+export const Subtitle = styled.p`
   color: ${({ theme }) => theme.color.waterloo};
   margin: 0;
 `;
