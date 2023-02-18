@@ -24,3 +24,11 @@ export const Vote = styled.p`
     color: ${({ theme }) => theme.color.waterloo};
   `}
 `;
+
+export const Star = styled.img`
+  width: 24px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+    width: 16px;
+  }
+`;
