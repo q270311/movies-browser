@@ -22,4 +22,9 @@ export const Title = styled.h1`
   font-size: 36px;
   margin-top: 38px;
   margin-bottom: 0px;
+
+  @media (max-width: 400px) {
+    font-size: 20px;
+    margin-top: 20px;
+  }
 `;
