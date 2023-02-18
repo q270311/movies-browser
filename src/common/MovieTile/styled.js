@@ -18,20 +18,6 @@ export const Tile = styled.div`
   }
 `;
 
-export const Image = styled.img`
-  width: 100%;
-  height: auto;
-`;
-
-export const ImageWrapper = styled.div`
-  display: flex;
-
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
-    margin-right: 16px;
-    align-items: center;
-  }
-`;
-
 export const Description = styled.div`
   height: 200px;
   display: flex;
