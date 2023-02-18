@@ -12,7 +12,7 @@ export const MovieDescriptonTile = () => (
         <Title description>
           Mulan
         </Title>
-        <Subtitle>
+        <Subtitle description>
           2020
         </Subtitle>
         <AdditionalInfo />
