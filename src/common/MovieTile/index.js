@@ -5,7 +5,7 @@ import { Genres } from "./Genres";
 export const MovieTile = () => (
   <>
     <Tile>
-        <Image />
+      <Image />
       <Description>
         <MainInfo />
         <Genres />
