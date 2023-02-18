@@ -54,4 +54,9 @@ export const Button = styled.button`
   border: none;
   line-height: 19px;
   transition: 0.3s;
+
+  &:hover {
+    filter: brightness(125%);
+    transform: scale(1.05);
+  }
 `;
