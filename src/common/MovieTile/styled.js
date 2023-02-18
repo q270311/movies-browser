@@ -77,6 +77,14 @@ export const Subtitle = styled.p`
   }
 `;
 
+export const VotesWrapper = styled.div`
+  margin-top: 16px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+    margin-top: 4px;
+  }
+`;
+
 export const Details = styled.div`
   grid-column: auto; 
   padding-top: 16px;
