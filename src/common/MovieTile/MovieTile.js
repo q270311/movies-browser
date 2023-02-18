@@ -1,19 +1,15 @@
-import { Tile, Description, Title, Subtitle } from "./styled";
+import { Tile, Description } from "./styled";
 import { Image } from "./Image";
 import { Genres } from "./Genres";
 import { Votes } from "./Votes";
+import { MainInfo } from "./MainInfo";
 
 export const MovieTile = () => (
   <>
     <Tile>
       <Image />
       <Description>
-        <Title>
-          Mulan
-        </Title>
-        <Subtitle>
-          2020
-        </Subtitle>
+        <MainInfo />
         <Genres />
         <Votes />
       </Description>
