@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+export const Wrapper = styled.div`
+
+`;
+
 export const Paragraph = styled.p`
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
