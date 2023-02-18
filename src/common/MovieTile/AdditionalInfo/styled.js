@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const Paragraph = styled.p`
+export const Value = styled.p`
   margin: 0;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
