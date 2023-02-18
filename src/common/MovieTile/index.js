@@ -10,6 +10,7 @@ export const MovieTile = () => (
       <Image />
       <Description>
         <MainInfo />
+        <AdditionalInfo />
         <Genres />
         <Votes />
       </Description>
