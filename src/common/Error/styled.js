@@ -34,4 +34,10 @@ export const Subtitle = styled.h2`
   font-weight: 500;
   margin-top: 24px;
   margin-bottom: 24px;
+
+  @media (max-width: 400px) {
+    font-size: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
 `;
