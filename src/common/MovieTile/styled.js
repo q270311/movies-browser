@@ -46,15 +46,6 @@ export const Year = styled.p`
   margin: 0;
 `;
 
-export const Genres = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0px;
-  gap: 8px;
-  margin-top: 8px;
-  margin-bottom: 8px;
-`;
-
 export const Genre = styled.p`
   background-color: ${({ theme }) => theme.color.mystic};
   border-radius: 5px;
