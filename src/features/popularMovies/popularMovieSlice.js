@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const popularMoviesSlice = createSlice({
+const popularMovieSlice = createSlice({
     name: "popularMovie",
     initialState: {
         page: 1,
@@ -8,22 +8,22 @@ const popularMoviesSlice = createSlice({
         status: "loading"   //success, loading or error
     },
     reducers: {
-        fetchPopularMoviesSuccess: (state, { payload }) => {
+        fetchPopularMovieSuccess: (state, { payload }) => {
             state.movies = payload;
             state.status = "success";
         },
-        fetchPopularMoviesError: (state) => {
+        fetchPopularMovieError: (state) => {
             state.status = "error";
         },
     },
 });
 export const {
-    fetchPopularMoviesSuccess,
-    fetchPopularMoviesError,
-} = popularMoviesSlice.actions;
+    fetchPopularMovieSuccess,
+    fetchPopularMovieError,
+} = popularMovieSlice.actions;
 
-export const selectPopularMoviesState = (state) => state.popularMovie;
-export const selectPopularMovies = (state) => selectPopularMoviesState(state).movies;
-export const selectStatus = (state) => selectPopularMoviesState(state).status;
+export const selectPopularMovieState = (state) => state.popularMovie;
+export const selectPopularMovie = (state) => selectPopularMovieState(state).movies;
+export const selectStatus = (state) => selectPopularMovieState(state).status;
 
-export default popularMoviesSlice.reducer;
+export default popularMovieSlice.reducer;
