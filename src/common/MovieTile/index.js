@@ -1,7 +1,8 @@
-import { Tile, Description, Votes } from "./styled";
+import { Tile, Description } from "./styled";
 import { Image } from "./Image";
 import { Genres } from "./Genres";
 import { MainInfo } from "./MainInfo";
+import { Votes } from "./Votes";
 
 export const MovieTile = () => (
   <>
