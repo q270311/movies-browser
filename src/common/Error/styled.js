@@ -12,9 +12,36 @@ export const Wrapper = styled.div`
 
 export const ErrorIcon = styled(Error)`
   width: 100px;
+  transition: 0.3s;
 
   @media (max-width: 400px) {
     width: 80px;
+  }
+
+  .animate {
+    animation: wobble 1s ease-in-out infinite;
+
+    @keyframes wobble { 
+      0% {
+        transform: translate(0, 6px);
+      }
+    
+      25% {
+        transform: translate(-2px, -2px);
+      }
+
+      50% {
+        transform: translate(0px, 6px);
+      }
+
+      75% {
+        transform: translate(2px, -2px);
+      }
+            
+      100% {
+        transform: translate(0, 6px);
+      }
+    }
   }
 `;
 
