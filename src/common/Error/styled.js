@@ -17,3 +17,9 @@ export const ErrorIcon = styled(Error)`
     width: 80px;
   }
 `;
+
+export const Title = styled.h1`
+  font-size: 36px;
+  margin-top: 38px;
+  margin-bottom: 0px;
+`;
