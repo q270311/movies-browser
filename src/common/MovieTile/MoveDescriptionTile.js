@@ -1,7 +1,7 @@
 import { Tile, Description, VotesWrapper, Details } from "./styled";
 import { Image } from "./Image";
 import { Genres } from "./Genres";
-import { Votes } from "./Votes";
+import { ExtendedVotes } from "./Votes";
 import { AdditionalInfo } from "./AdditionalInfo";
 import { DetailsMainInfo } from "./MainInfo";
 
@@ -14,7 +14,7 @@ export const MovieDescriptonTile = () => (
         <AdditionalInfo />
         <Genres />
         <VotesWrapper>
-          <Votes />
+          <ExtendedVotes />
         </VotesWrapper>
       </Description>
       <Details>
