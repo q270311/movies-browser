@@ -11,6 +11,11 @@ export const Wrapper = styled.div`
   }
 `;
 
+export const Paragraph = styled.div`
+  display: inline-flex;
+  font-size: 18px;
+`;
+
 export const Value = styled.p`
   margin: 0;
 
