@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Wrapper, ErrorIcon, Title, Subtitle, Button } from "./styled";
 
 export const Error = () => {
@@ -10,9 +11,11 @@ export const Error = () => {
       <Subtitle>
         Please check your network connection and try again
       </Subtitle>
-      <Button>
-        Back to home page
-      </Button>
-    </Wrapper>
+      <Link to="/">
+        <Button>
+          Back to home page
+        </Button>
+      </Link>
+    </Wrapper >
   );
 };
