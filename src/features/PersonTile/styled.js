@@ -31,3 +31,9 @@ export const PersonHeading = styled.h2`
   color: #18181b;
   margin: 0;
 `;
+
+export const PersonImage = styled.img`
+  width: 176px;
+  height: 231px;
+  border-radius: 5px;
+`;
