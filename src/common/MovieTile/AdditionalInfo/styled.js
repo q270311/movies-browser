@@ -16,6 +16,15 @@ export const Paragraph = styled.div`
   font-size: 18px;
 `;
 
+export const Attribute = styled.p`
+  margin: 0;
+  color: ${({ theme }) => theme.color.storm};
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+    display: none;
+  }
+`;
+
 export const Value = styled.p`
   margin: 0;
 
