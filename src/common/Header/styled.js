@@ -34,4 +34,5 @@ export const NavigationLink = styled(NavLink)`
   display: flex;
   text-decoration: none;
   gap: 16px;
+  flex-wrap: wrap;
 `;
