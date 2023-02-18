@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   margin: 195px auto 0 auto;
   text-align: center;
   
-  @media (max-width: 400px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
     margin-top: 100px;
   }
 `;
@@ -14,7 +14,7 @@ export const ErrorIcon = styled(Error)`
   width: 100px;
   transition: 0.3s;
 
-  @media (max-width: 400px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
     width: 80px;
   }
 
@@ -50,7 +50,7 @@ export const Title = styled.h1`
   margin-top: 38px;
   margin-bottom: 0px;
 
-  @media (max-width: 400px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
     font-size: 20px;
     margin-top: 20px;
   }
@@ -62,7 +62,7 @@ export const Subtitle = styled.h2`
   margin-top: 24px;
   margin-bottom: 24px;
 
-  @media (max-width: 400px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
     font-size: 16px;
     margin-top: 16px;
     margin-bottom: 16px;
@@ -87,7 +87,7 @@ export const Button = styled.button`
     transform: scale(1.05);
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
     padding: 10px 16px;
     font-size: 10px;
   }
