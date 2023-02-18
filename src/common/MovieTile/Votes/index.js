@@ -1,4 +1,4 @@
-import { Wrapper, Vote } from "./styled";
+import { Wrapper, Vote, Star } from "./styled";
 import star from "./star.svg";
 
 export const Votes = () => (
