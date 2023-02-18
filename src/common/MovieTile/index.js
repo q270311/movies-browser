@@ -1,6 +1,7 @@
-import { Tile, Description, Title, Year, Genres, Genre, Votes, Vote, Star } from "./styled";
+import { Tile, Description, Title, Year, Votes, Vote, Star } from "./styled";
 import { Image } from "./Image";
 import star from "./star.svg";
+import { Genres } from "./Genres";
 
 export const MovieTile = () => (
   <>
@@ -13,17 +14,7 @@ export const MovieTile = () => (
         <Year>
           2020
         </Year>
-        <Genres>
-          <Genre>
-            Action
-          </Genre>
-          <Genre>
-            Adventure
-          </Genre>
-          <Genre>
-            Drama
-          </Genre>
-        </Genres>
+        <Genres />
         <Votes>
           <Vote>
             <Star
