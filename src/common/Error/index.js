@@ -11,7 +11,7 @@ export const Error = () => {
         Please check your network connection and try again
       </Subtitle>
       <Button>
-
+        Back to home page
       </Button>
     </Wrapper>
   );
