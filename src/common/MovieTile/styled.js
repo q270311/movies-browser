@@ -36,6 +36,7 @@ export const Description = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
     height: auto;
   }
+
   ${({ description }) => description && css`
     margin-left: 40px;
     height: 100%;
@@ -58,6 +59,13 @@ export const Title = styled.h2`
     margin-top: 0;
     margin-bottom: 4px;
   }
+
+  ${({ description }) => description && css`
+    margin-top: 8px;
+    margin-bottom: 24px;
+    font-size: 36px;
+    font-weight: 600;
+  `}
 `;
 
 export const Subtitle = styled.p`
