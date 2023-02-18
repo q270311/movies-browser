@@ -12,4 +12,8 @@ export const Wrapper = styled.div`
 
 export const ErrorIcon = styled(Error)`
   width: 100px;
+
+  @media (max-width: 400px) {
+    width: 80px;
+  }
 `;
