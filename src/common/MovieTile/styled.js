@@ -36,6 +36,14 @@ export const Description = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
     height: auto;
   }
+  ${({ description }) => description && css`
+    margin-left: 40px;
+    height: 100%;
+  
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+      margin-left: 0;
+    }
+  `}
 `;
 
 export const Title = styled.h2`
