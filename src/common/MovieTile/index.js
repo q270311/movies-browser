@@ -1,16 +1,11 @@
-import { Tile, Image, ImageWrapper, Description, Title, Year, Genres, Genre, Votes, Vote, Star } from "./styled";
-import poster from "./poster.png";
+import { Tile, Description, Title, Year, Genres, Genre, Votes, Vote, Star } from "./styled";
+import { Image } from "./Image";
 import star from "./star.svg";
 
 export const MovieTile = () => (
   <>
     <Tile>
-      <ImageWrapper>
-        <Image
-          alt="moviePoster"
-          src={poster}
-        />
-      </ImageWrapper>
+        <Image />
       <Description>
         <Title>
           Mulan
