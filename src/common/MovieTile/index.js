@@ -20,7 +20,7 @@ export const MovieTile = () => (
   </>
 );
 
-export const MovieDescriptonTile = () => (
+export const MovieDescriptionTile = () => (
   <>
     <Tile
       description
