@@ -57,6 +57,10 @@ export const Total = styled.p`
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
     display: none;
   }
+
+  ${({ backdrop }) => backdrop && css`
+  font-size: 16px;
+  `}
 `;
 
 export const Star = styled.img`
