@@ -35,8 +35,8 @@ export const Vote = styled.p`
   `}
   
   ${({ smaller }) => smaller && css`
-  color: ${({ theme }) => theme.color.black};
-  font-size: 14px;
+    color: ${({ theme }) => theme.color.black};
+    font-size: 14px;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
     color: ${({ theme }) => theme.color.waterloo};
@@ -44,7 +44,7 @@ export const Vote = styled.p`
   `}
 
   ${({ backdrop }) => backdrop && css`
-  color: white;
+    color: white;
   `}
 
   ${({ big }) => big && css`
@@ -64,7 +64,7 @@ export const Total = styled.p`
   }
 
   ${({ backdrop }) => backdrop && css`
-  font-size: 16px;
+    font-size: 16px;
   `}
 `;
 
@@ -76,11 +76,11 @@ export const Star = styled.img`
   }
 
   ${({ backdrop }) => backdrop && css`
-  width: 40px;
+    width: 40px;
   `}
 `;
 
 export const Container = styled.div`
-display: inline-flex;
-gap: 8px;
+  display: inline-flex;
+  gap: 8px;
 `;
