@@ -6,8 +6,8 @@ export const Wrapper = styled.div`
   gap: 12px;
 
   ${({ backdrop }) => backdrop && css`
-  color: white;
-  flex-direction: column;
+    color: white;
+    flex-direction: column;
   `}
 `;
 
@@ -69,6 +69,10 @@ export const Star = styled.img`
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
     width: 16px;
   }
+
+  ${({ backdrop }) => backdrop && css`
+  width: 40px;
+  `}
 `;
 
 export const Container = styled.div`
