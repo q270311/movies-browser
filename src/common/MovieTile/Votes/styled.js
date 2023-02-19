@@ -28,6 +28,15 @@ export const Vote = styled.p`
     font-size: 22px;
     font-weight: 500;
   `}
+  
+  ${({ smaller }) => smaller && css`
+  color: ${({ theme }) => theme.color.black};
+  font-size: 14px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+    color: ${({ theme }) => theme.color.waterloo};
+  }
+  `}
 `;
 
 export const Star = styled.img`
