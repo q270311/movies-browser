@@ -39,6 +39,13 @@ export const Vote = styled.p`
   `}
 `;
 
+export const Total = styled.p`
+  font-size: 14px;
+  margin: 0;
+  display: flex;
+  align-self: flex-end;
+`;
+
 export const Star = styled.img`
   width: 24px;
 
