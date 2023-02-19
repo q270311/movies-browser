@@ -48,32 +48,34 @@ export const ExtendedVotes = () => (
 );
 
 export const BackdropVotes = () => (
-  <Wrapper backdrop>
+  <Wrapper
+    backdrop
+  >
     <Container>
-    <Vote>
-      <Star
-        src={star}
-        alt=""
+      <Vote>
+        <Star
+          src={star}
+          alt=""
+          backdrop
+        />
+      </Vote>
+      <Vote
+        big
+      >
+        7,7
+      </Vote>
+      <Total
         backdrop
-      />
-    </Vote>
-    <Vote
-      big
-    >
-      7,7
-    </Vote>
-    <Total
-      backdrop
-    >
-      /10
-    </Total>
+      >
+        /10
+      </Total>
     </Container>
     <div>
-    <Vote
-      backdrop
-    >
-      35 votes
-    </Vote>
+      <Vote
+        backdrop
+      >
+        35 votes
+      </Vote>
     </div>
   </Wrapper>
 );
