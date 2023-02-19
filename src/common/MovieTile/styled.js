@@ -20,10 +20,15 @@ export const Tile = styled.div`
   ${({ description }) => description && css`
     padding: 40px;
     display: grid;
-    grid-template-columns: 1fr 3fr;
-    
+    grid-template-columns: 1fr 2fr;
+
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
       padding: 16px;
+      grid-template-columns: 1fr 2fr;
+    }
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.smallDevice}px) {
+      grid-template-columns: 1fr 1fr;
     }
   `}
 `;
@@ -39,7 +44,7 @@ export const Description = styled.div`
 
   ${({ description }) => description && css`
     margin-left: 40px;
-    height: 100%;
+    height: 90%;
   
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
       margin-left: 0;
