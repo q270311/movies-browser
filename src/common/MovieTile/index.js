@@ -22,9 +22,13 @@ export const MovieTile = () => (
 
 export const MovieDescriptonTile = () => (
   <>
-    <Tile description>
+    <Tile
+      description
+    >
       <Image />
-      <Description description>
+      <Description
+        description
+      >
         <DetailsMainInfo />
         <AdditionalInfo />
         <Genres />
