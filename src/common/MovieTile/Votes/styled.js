@@ -44,6 +44,10 @@ export const Total = styled.p`
   margin: 0;
   display: flex;
   align-self: flex-end;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+    display: none;
+  }
 `;
 
 export const Star = styled.img`
