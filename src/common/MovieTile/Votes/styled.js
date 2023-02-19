@@ -42,6 +42,10 @@ export const Vote = styled.p`
     color: ${({ theme }) => theme.color.waterloo};
   }
   `}
+
+  ${({ backdrop }) => backdrop && css`
+  color: white;
+  `}
 `;
 
 export const Total = styled.p`
