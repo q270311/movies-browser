@@ -13,10 +13,14 @@ export const MainInfo = () => (
 
 export const DetailsMainInfo = () => (
   <>
-    <Title description>
+    <Title
+      description
+    >
       Mulan
     </Title>
-    <Subtitle description>
+    <Subtitle
+      description
+    >
       2020
     </Subtitle>
   </>
