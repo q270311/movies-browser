@@ -4,6 +4,11 @@ export const Wrapper = styled.div`
   display: flex;
   height: 100%;
   gap: 12px;
+
+  ${({ backdrop }) => backdrop && css`
+  color: white;
+  flex-direction: column;
+  `}
 `;
 
 export const Vote = styled.p`
