@@ -57,3 +57,8 @@ export const Star = styled.img`
     width: 16px;
   }
 `;
+
+export const Container = styled.div`
+display: inline-flex;
+gap: 8px;
+`;
