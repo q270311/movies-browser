@@ -23,6 +23,11 @@ export const Vote = styled.p`
   ${({ count }) => count && css`
     color: ${({ theme }) => theme.color.waterloo};
   `}
+
+  ${({ extended }) => extended && css`
+    font-size: 22px;
+    font-weight: 500;
+  `}
 `;
 
 export const Star = styled.img`
