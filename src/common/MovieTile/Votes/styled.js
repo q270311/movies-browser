@@ -46,6 +46,11 @@ export const Vote = styled.p`
   ${({ backdrop }) => backdrop && css`
   color: white;
   `}
+
+  ${({ big }) => big && css`
+    font-size: 30px;
+    font-weight: 500;
+  `}
 `;
 
 export const Total = styled.p`
