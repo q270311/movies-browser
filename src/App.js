@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router";
 import { toMovieDetails, toMoviesList, toPeopleList, toPersonDetails } from "./routes";
 import Header from "./common/Header";
-import PopularMovie from "./features/popularMovies";
+import PopularMovie from "./features/moviesList";
 
 function App() {
   return (
@@ -13,8 +13,6 @@ function App() {
         <Route path={toPeopleList()} element="{<PeopleList />}" />
       </Routes>
       <Header/>
-      <p>Test reading data from API</p>
-      <p>Popular films, page 1:</p>
       <PopularMovie />
     </div>
   );
