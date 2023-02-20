@@ -1,5 +1,7 @@
 export const theme = {
-  color: {},
+  color: {
+    woodsmoke: "#18181b",
+  },
   breakpoint: {
     mobileDevice: 767,
   },
