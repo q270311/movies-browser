@@ -11,4 +11,7 @@ export const Wrapper = styled.div`
 `;
 
 export const StyledIcon = styled(NoResultsIcon)`
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+    transform: scale(0.5);
+  }
 `;
