@@ -10,4 +10,8 @@ export const StyledIcon = styled(LoaderIcon)`
       transform: rotate(360deg);
     }
   }
+  
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+    width: 35px;
+  }
 `;
