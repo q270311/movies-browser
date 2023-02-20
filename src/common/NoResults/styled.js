@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   text-align: center;
   
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
-    margin-top: 20px;
+    margin-top: 0px;
   }
 `;
 
