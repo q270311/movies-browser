@@ -28,4 +28,26 @@ export const StyledIcon = styled(NoResultsIcon)`
       }
     }
   }
+
+  .move {
+    animation: wind 3s linear infinite;
+    
+    @keyframes wind { 
+      0% {
+        transform: translate(0, 0px);
+      }
+    
+      25% {
+        transform: translate(-6px, 0px);
+      }
+      
+      75% {
+        transform: translate(6px, 0px);
+      }
+            
+      100% {
+        transform: translate(0, 0px);
+      }
+    }
+  } 
 `;
