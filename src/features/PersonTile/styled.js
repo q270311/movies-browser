@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 export const PersonTileContainer = styled.div`
   display: flex;
@@ -36,4 +37,11 @@ export const PersonImage = styled.img`
   width: 176px;
   height: 231px;
   border-radius: 5px;
+`;
+
+export const PersonLink = styled(NavLink)`
+  display: flex;
+  text-decoration: none;
+  gap: 16px;
+  flex-wrap: wrap;
 `;
