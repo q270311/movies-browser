@@ -1,53 +1,45 @@
-import { Tile, Image, ImageWrapper, Description, Title, Year, Genres, Genre, Votes, Vote, Star } from "./styled";
-import poster from "./poster.png";
-import star from "./star.svg";
+import { Tile, Description, VotesWrapper, Details } from "./styled";
+import { Image } from "./Image";
+import { Genres } from "./Genres";
+import { Votes } from "./Votes";
+import { ExtendedVotes } from "./Votes";
+import { AdditionalInfo } from "./AdditionalInfo";
+import { MainInfo } from "./MainInfo";
+import { DetailsMainInfo } from "./MainInfo";
 
 export const MovieTile = () => (
   <>
     <Tile>
-      <ImageWrapper>
-        <Image
-          alt="moviePoster"
-          src={poster}
-        />
-      </ImageWrapper>
+      <Image />
       <Description>
-        <Title>
-          Mulan
-        </Title>
-        <Year>
-          2020
-        </Year>
-        <Genres>
-          <Genre>
-            Action
-          </Genre>
-          <Genre>
-            Adventure
-          </Genre>
-          <Genre>
-            Drama
-          </Genre>
-        </Genres>
-        <Votes>
-          <Vote>
-            <Star
-              src={star}
-              alt=""
-            />
-          </Vote>
-          <Vote
-            average
-          >
-            7,7
-          </Vote>
-          <Vote
-            count
-          >
-            35 votes
-          </Vote>
-        </Votes>
+        <MainInfo />
+        <Genres />
+        <Votes />
       </Description>
+    </Tile>
+  </>
+);
+
+export const MovieDescriptionTile = () => (
+  <>
+    <Tile
+      description
+    >
+      <Image />
+      <Description
+        description
+      >
+        <DetailsMainInfo />
+        <AdditionalInfo />
+        <Genres />
+        <VotesWrapper>
+          <ExtendedVotes />
+        </VotesWrapper>
+      </Description>
+      <Details>
+        A young Chinese maiden disguises herself as a male warrior in order to save her father.
+        Disguises herself as a male warrior in order to save her father.  A young Chinese maiden disguises herself as a male warrior in order to save her father.
+      </Details>
     </Tile>
   </>
 );
