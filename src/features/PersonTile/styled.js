@@ -8,7 +8,7 @@ export const PersonTileContainer = styled.div`
   gap: 12px;
   width: 208px;
   height: 339px;
-  background: #ffffff;
+  background: ${({ theme }) => theme.color.white};
   transition: 0.7s linear;
   filter: drop-shadow(0px 4px 12px rgba(186, 199, 213, 0.5));
 
@@ -28,7 +28,7 @@ export const PersonHeading = styled.h2`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #18181b;
+  color: ${({ theme }) => theme.color.woodsmoke};
   margin: 0;
 `;
 
