@@ -1,9 +1,18 @@
 import { Wrapper, Button, StyledVector, ButtonText, Text, PageText } from "./styled";
+import { useSelector, useDispatch } from "react-redux";
+import { selectPage, selectTotalPages, goToPage } from '../../features/movieDatabaseSlice';
 
 export const Pagination = () => {
+  const pageNumber = useSelector(selectPage);
+  const totalPages = useSelector(selectTotalPages);
+  const dispatch = useDispatch();
+
   return (
     <Wrapper>
-      <Button>
+      <Button
+        onClick={() => dispatch(goToPage({ page: 1 }))}
+        disabled={pageNumber === 1}
+      >
         <StyledVector />
         <StyledVector
           mobile="true"
@@ -12,7 +21,10 @@ export const Pagination = () => {
           First
         </ButtonText>
       </Button>
-      <Button>
+      <Button
+        onClick={() => dispatch(goToPage({ page: pageNumber - 1 }))}
+        disabled={pageNumber === 1}
+      >
         <StyledVector />
         <ButtonText>
           Previous
@@ -22,15 +34,18 @@ export const Pagination = () => {
         Page
       </Text>
       <PageText>
-        1
+        {pageNumber}
       </PageText>
       <Text>
         of
       </Text>
       <PageText>
-        500
+        {totalPages}
       </PageText>
-      <Button>
+      <Button
+        onClick={() => dispatch(goToPage({ page: pageNumber + 1 }))}
+        disabled={pageNumber === totalPages}
+      >
         <ButtonText>
           Next
         </ButtonText>
@@ -38,7 +53,10 @@ export const Pagination = () => {
           right="true"
         />
       </Button>
-      <Button>
+      <Button
+        onClick={() => dispatch(goToPage({ page: totalPages }))}
+        disabled={pageNumber === totalPages}
+      >
         <ButtonText>
           Last
         </ButtonText>
