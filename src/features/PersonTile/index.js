@@ -1,13 +1,12 @@
-import { PersonTileContainer, PersonImage, PersonHeading } from "./styled";
-import { NavigationLink } from "../common/Header/styled.js";
+import { PersonTileContainer, PersonImage, PersonHeading, PersonLink } from "./styled";
 
 const PersonTile = () => {
   return (
     <PersonTileContainer>
-      <NavigationLink to="/">
+      <PersonLink to="/">
         <PersonImage />
         <PersonHeading></PersonHeading>
-      </NavigationLink>
+      </PersonLink>
     </PersonTileContainer>
   );
 };
