@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 export const PersonTileContainer = styled.div`
   display: flex;
@@ -8,7 +9,7 @@ export const PersonTileContainer = styled.div`
   gap: 12px;
   width: 208px;
   height: 339px;
-  background: #ffffff;
+  background: ${({ theme }) => theme.color.white};
   transition: 0.7s linear;
   filter: drop-shadow(0px 4px 12px rgba(186, 199, 213, 0.5));
 
@@ -20,7 +21,6 @@ export const PersonTileContainer = styled.div`
 export const PersonHeading = styled.h2`
   width: 176px;
   height: 29px;
-  font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
   font-size: 22px;
@@ -28,7 +28,7 @@ export const PersonHeading = styled.h2`
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #18181b;
+  color: ${({ theme }) => theme.color.woodsmoke};
   margin: 0;
 `;
 
@@ -36,4 +36,11 @@ export const PersonImage = styled.img`
   width: 176px;
   height: 231px;
   border-radius: 5px;
+`;
+
+export const PersonLink = styled(NavLink)`
+  display: flex;
+  text-decoration: none;
+  gap: 16px;
+  flex-wrap: wrap;
 `;
