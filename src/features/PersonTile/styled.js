@@ -21,7 +21,6 @@ export const PersonTileContainer = styled.div`
 export const PersonHeading = styled.h2`
   width: 176px;
   height: 29px;
-  font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
   font-size: 22px;
