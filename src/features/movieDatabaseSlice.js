@@ -11,6 +11,7 @@ const movieDatabaseSlice = createSlice({
     },
     reducers: {
         fetchDataSuccess: (state, { payload }) => {
+            state.status="loading";
             state.totalPages = payload.total_pages > 500 ? 500 : payload.total_pages;
             state.totalResults = payload.total_results;
             state.data = payload.results;
