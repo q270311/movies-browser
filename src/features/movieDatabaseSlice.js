@@ -6,8 +6,8 @@ const movieDatabaseSlice = createSlice({
         page: 1,
         totalPages: 0,
         totalResults: 0,
-        data: [],           //movies, people, moviesDetails, peopleDetails
-        status: "loading"   //success, loading or error
+        data: [],          
+        status: "loading"
     },
     reducers: {
         fetchDataSuccess: (state, { payload }) => {
