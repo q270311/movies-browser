@@ -20,7 +20,11 @@ const Search = () => {
   return (
     <SearchWrapper>
       <SearchIcon src={search} />
-      <SearchInput />
+      <SearchInput
+        autoComplete="off"
+        onChange={onInputChange}
+        value={query || ""}
+      />
     </SearchWrapper>
   );
 };
