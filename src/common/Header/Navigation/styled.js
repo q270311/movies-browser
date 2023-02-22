@@ -6,7 +6,7 @@ export const NavList = styled.ul`
   display: flex;
   align-items: center;
   list-style-type: none;
-  padding: 0 311px 0 104px;
+  padding: 0 311px 0 80px;
 `;
 
 export const NavItems = styled.li`
