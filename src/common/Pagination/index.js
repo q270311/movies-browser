@@ -13,9 +13,12 @@ export const Pagination = () => {
         onClick={() => dispatch(goToPage({ page: 1 }))}
         disabled={pageNumber === 1}
       >
-        <StyledVector />
+        <StyledVector
+          disabled={pageNumber === 1}
+        />
         <StyledVector
           mobile="true"
+          disabled={pageNumber === 1}
         />
         <ButtonText>
           First
@@ -25,7 +28,9 @@ export const Pagination = () => {
         onClick={() => dispatch(goToPage({ page: pageNumber - 1 }))}
         disabled={pageNumber === 1}
       >
-        <StyledVector />
+        <StyledVector
+        disabled={pageNumber === 1}
+        />
         <ButtonText>
           Previous
         </ButtonText>
@@ -51,6 +56,7 @@ export const Pagination = () => {
         </ButtonText>
         <StyledVector
           right="true"
+          disabled={pageNumber === totalPages}
         />
       </Button>
       <Button
@@ -62,10 +68,12 @@ export const Pagination = () => {
         </ButtonText>
         <StyledVector
           right="true"
+          disabled={pageNumber === totalPages}
         />
         <StyledVector
           right="true"
           mobile="true"
+          disabled={pageNumber === totalPages}
         />
       </Button>
     </Wrapper>
