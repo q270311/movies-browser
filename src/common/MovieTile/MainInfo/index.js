@@ -1,27 +1,27 @@
 import { Title, Subtitle } from "./styled";
 
-export const MainInfo = () => (
+export const MainInfo = ({ title, year }) => (
   <>
     <Title>
-      Mulan
+      {title}
     </Title>
     <Subtitle>
-      2020
+      {year}
     </Subtitle>
   </>
 );
 
-export const DetailsMainInfo = () => (
+export const DetailsMainInfo = ({ title, year }) => (
   <>
     <Title
       description
     >
-      Mulan
+      {title}
     </Title>
     <Subtitle
       description
     >
-      2020
+      {year}
     </Subtitle>
   </>
 )
