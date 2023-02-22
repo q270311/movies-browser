@@ -7,13 +7,13 @@ import { AdditionalInfo } from "./AdditionalInfo";
 import { MainInfo } from "./MainInfo";
 import { DetailsMainInfo } from "./MainInfo";
 
-export const MovieTile = () => (
+export const MovieTile = ({ title, year, genres }) => (
   <>
     <Tile>
       <Image />
       <Description>
-        <MainInfo />
-        <Genres />
+        <MainInfo title={title} year={year} />
+        <Genres genres={genres} />
         <Votes />
       </Description>
     </Tile>
