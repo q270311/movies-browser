@@ -1,11 +1,13 @@
 import { Poster, ImageWrapper } from "./styled";
-import poster from "./poster.png";
 
-export const Image = () => (
-  <ImageWrapper>
-    <Poster
-      alt="moviePoster"
-      src={poster}
-    />
-  </ImageWrapper>
-);
+export const Image = ({ posterPath }) => {
+  const secureBaseUrl = "https://image.tmdb.org/t/p/w300";
+  return (
+    <ImageWrapper>
+      <Poster
+        alt="movie poster"
+        src={`${secureBaseUrl}${posterPath}`}
+      />
+    </ImageWrapper>
+  )
+}
