@@ -6,8 +6,6 @@ import { selectGenres } from '../../../features/movieDatabaseSlice';
 
 export const Genres = ({ genres }) => {
   const genresDictionary = useSelector(selectGenres);
-  const genresNames=genresDictionary.find(({id}) => "28");
-  console.log(genresNames);
 
   return (
     <Wrapper>
