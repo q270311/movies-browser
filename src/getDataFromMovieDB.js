@@ -8,3 +8,11 @@ export const getMoviePopular = async ({ page }) => {
 
     return await response.data;
 };
+export const getGenres = async () => {
+    const response = await axios.get(`https://api.themoviedb.org/3/genre/movie/list?api_key=0a7a30a768304b21322288db13dcdb24&language=en-US`);
+    if (!response.ok) {        
+        new Error(response.statusText);
+    }
+        
+    return await response.data.genres;
+};
