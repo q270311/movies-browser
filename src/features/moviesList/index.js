@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import { Pagination } from "../../common/Pagination";
+import { MovieTile } from "../../common/MovieTile"
 import { selectData, selectStatus } from '../movieDatabaseSlice';
 
 const MoviesList = () => {
@@ -13,13 +14,14 @@ const MoviesList = () => {
     }
     return (
         <>
-            <ul>
-                {popularMovies.map(movie => (
-                    <li key={movie.id} >
-                        {movie.title}
-                    </li>
-                ))}
-            </ul>
+            {popularMovies.map(movie => (
+                <MovieTile
+                    key={movie.id}
+                    title={movie.title}
+                    year={movie.release_date.substring(0, 4)}
+                    genres={movie.genre_ids}
+                />
+            ))}
             <Pagination />
         </>
     );
