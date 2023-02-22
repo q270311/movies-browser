@@ -6,21 +6,21 @@ export const Pagination = () => {
   const pageNumber = useSelector(selectPage);
   const totalPages = useSelector(selectTotalPages);
   const dispatch = useDispatch();
-  const firstPage = pageNumber === 1;
-  const lastPage = pageNumber === totalPages;
+  const isFirstPage = pageNumber === 1;
+  const isLastPage = pageNumber === totalPages;
 
   return (
     <Wrapper>
       <Button
         onClick={() => dispatch(goToPage({ page: 1 }))}
-        disabled={firstPage}
+        disabled={isFirstPage}
       >
         <StyledVector
-          disabled={firstPage}
+          disabled={isFirstPage}
         />
         <StyledVector
           mobile="true"
-          disabled={firstPage}
+          disabled={isFirstPage}
         />
         <ButtonText>
           First
@@ -28,10 +28,10 @@ export const Pagination = () => {
       </Button>
       <Button
         onClick={() => dispatch(goToPage({ page: pageNumber - 1 }))}
-        disabled={firstPage}
+        disabled={isFirstPage}
       >
         <StyledVector
-          disabled={firstPage}
+          disabled={isFirstPage}
         />
         <ButtonText>
           Previous
@@ -51,31 +51,31 @@ export const Pagination = () => {
       </PageText>
       <Button
         onClick={() => dispatch(goToPage({ page: pageNumber + 1 }))}
-        disabled={lastPage}
+        disabled={isLastPage}
       >
         <ButtonText>
           Next
         </ButtonText>
         <StyledVector
           right="true"
-          disabled={lastPage}
+          disabled={isLastPage}
         />
       </Button>
       <Button
         onClick={() => dispatch(goToPage({ page: totalPages }))}
-        disabled={lastPage}
+        disabled={isLastPage}
       >
         <ButtonText>
           Last
         </ButtonText>
         <StyledVector
           right="true"
-          disabled={lastPage}
+          disabled={isLastPage}
         />
         <StyledVector
           right="true"
           mobile="true"
-          disabled={lastPage}
+          disabled={isLastPage}
         />
       </Button>
     </Wrapper>
