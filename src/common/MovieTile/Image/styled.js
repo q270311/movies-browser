@@ -14,4 +14,5 @@ export const ImageWrapper = styled.div`
 export const Poster = styled.img`
   width: 100%;
   height: auto;
+  border-radius: 5px;
 `;
