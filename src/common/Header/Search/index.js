@@ -24,6 +24,7 @@ const Search = () => {
         autoComplete="off"
         onChange={onInputChange}
         value={query || ""}
+        type="text"
       />
     </SearchWrapper>
   );
