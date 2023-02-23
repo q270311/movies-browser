@@ -11,6 +11,12 @@ export const Title = styled.h1`
   font-weight: 600;
   margin-top: 56px;
   margin-bottom: 0;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+    font-size: 18px;
+    margin-top: 24px;
+    margin-bottom: 0;
+  }
 `;
 
 export const Subtitle = styled.h2`
@@ -18,4 +24,10 @@ export const Subtitle = styled.h2`
   font-weight: 600;
   margin-top: 64px;
   margin-bottom: 32px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+    font-size: 20px;
+    margin-top: 24px;
+    margin-bottom: 0;
+  }
 `;
