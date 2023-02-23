@@ -7,8 +7,12 @@ export const Image = ({ posterPath }) => {
     <ImageWrapper>
       <Poster
         alt="movie poster"
-        src={`${secureBaseUrl}${posterPath}`}
+        src={
+          posterPath ?
+            `${secureBaseUrl}${posterPath}` :
+            `${noPoster}`
+        }
       />
     </ImageWrapper>
   )
-}
+};
