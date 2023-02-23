@@ -7,14 +7,14 @@ import { AdditionalInfo } from "./AdditionalInfo";
 import { MainInfo } from "./MainInfo";
 import { DetailsMainInfo } from "./MainInfo";
 
-export const MovieTile = () => (
+export const MovieTile = ({posterPath, title, year, genres, voteAverage, voteCount }) => (
   <>
     <Tile>
-      <Image />
+      <Image posterPath={posterPath} />
       <Description>
-        <MainInfo />
-        <Genres />
-        <Votes />
+        <MainInfo title={title} year={year} />
+        <Genres genres={genres} />
+        <Votes voteAverage={voteAverage} voteCount={voteCount} />
       </Description>
     </Tile>
   </>

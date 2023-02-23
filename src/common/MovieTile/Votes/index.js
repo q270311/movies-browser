@@ -1,28 +1,28 @@
 import { Wrapper, Vote, Star, Total, Container } from "./styled";
 import star from "./star.svg";
 
-export const Votes = () => (
+export const Votes = ({ voteAverage, voteCount }) => (
   <Wrapper>
     <Vote>
       <Star
         src={star}
-        alt=""
+        alt="star_icon"
       />
     </Vote>
     <Vote
       average
     >
-      7,7
+      {voteAverage}
     </Vote>
     <Vote
       count
     >
-      35 votes
+      {voteCount} votes
     </Vote>
   </Wrapper>
 );
 
-export const ExtendedVotes = () => (
+export const ExtendedVotes = ({ voteAverage, voteCount }) => (
   <Wrapper>
     <Vote>
       <Star
@@ -34,7 +34,7 @@ export const ExtendedVotes = () => (
       average
       extended
     >
-      7,7
+      {voteAverage}
     </Vote>
     <Total>
       /10
@@ -42,12 +42,12 @@ export const ExtendedVotes = () => (
     <Vote
       smaller
     >
-      35 votes
+      {voteCount} votes
     </Vote>
   </Wrapper>
 );
 
-export const BackdropVotes = () => (
+export const BackdropVotes = ({ voteAverage, voteCount }) => (
   <Wrapper
     backdrop
   >
@@ -62,7 +62,7 @@ export const BackdropVotes = () => (
       <Vote
         big
       >
-        7,7
+        {voteAverage}
       </Vote>
       <Total
         backdrop
@@ -74,7 +74,7 @@ export const BackdropVotes = () => (
       <Vote
         backdrop
       >
-        35 votes
+        {voteCount} votes
       </Vote>
     </div>
   </Wrapper>

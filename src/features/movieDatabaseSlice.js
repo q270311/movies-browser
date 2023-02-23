@@ -6,15 +6,17 @@ const movieDatabaseSlice = createSlice({
         page: 1,
         totalPages: 0,
         totalResults: 0,
-        data: [],          
+        data: [],
+        genres: [],          
         status: "loading"
     },
     reducers: {
-        fetchDataSuccess: (state, { payload }) => {
-            state.status="loading";
-            state.totalPages = payload.total_pages > 500 ? 500 : payload.total_pages;
-            state.totalResults = payload.total_results;
-            state.data = payload.results;
+        fetchDataSuccess: (state, {payload}) => {
+            state.status="loading";            
+            state.genres = payload.genres;
+            state.totalPages = payload.data.total_pages > 500 ? 500 : payload.data.total_pages;
+            state.totalResults = payload.data.total_results;
+            state.data = payload.data.results;
             state.status = "success";
         },
         fetchDataError: (state) => {
@@ -36,6 +38,7 @@ export const selectPage = (state) => selectDatabaseMovieState(state).page;
 export const selectTotalPages = (state) => selectDatabaseMovieState(state).totalPages;
 export const selectTotalResults = (state) => selectDatabaseMovieState(state).totalResults;
 export const selectData = (state) => selectDatabaseMovieState(state).data;
+export const selectGenres = (state) => selectDatabaseMovieState(state).genres;
 export const selectStatus = (state) => selectDatabaseMovieState(state).status;
 
 export default movieDatabaseSlice.reducer;
