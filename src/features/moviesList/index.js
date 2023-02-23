@@ -21,7 +21,7 @@ const MoviesList = () => {
                         key={movie.id}
                         posterPath={movie.poster_path}
                         title={movie.title}
-                        year={movie.release_date.substring(0, 4)}
+                        year={(movie.release_date || "").substring(0, 4)}
                         genres={movie.genre_ids}
                         voteAverage={movie.vote_average}
                         voteCount={movie.vote_count}
