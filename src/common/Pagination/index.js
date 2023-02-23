@@ -6,16 +6,21 @@ export const Pagination = () => {
   const pageNumber = useSelector(selectPage);
   const totalPages = useSelector(selectTotalPages);
   const dispatch = useDispatch();
+  const isFirstPage = pageNumber === 1;
+  const isLastPage = pageNumber === totalPages;
 
   return (
     <Wrapper>
       <Button
         onClick={() => dispatch(goToPage({ page: 1 }))}
-        disabled={pageNumber === 1}
+        disabled={isFirstPage}
       >
-        <StyledVector />
+        <StyledVector
+          disabled={isFirstPage}
+        />
         <StyledVector
           mobile="true"
+          disabled={isFirstPage}
         />
         <ButtonText>
           First
@@ -23,9 +28,11 @@ export const Pagination = () => {
       </Button>
       <Button
         onClick={() => dispatch(goToPage({ page: pageNumber - 1 }))}
-        disabled={pageNumber === 1}
+        disabled={isFirstPage}
       >
-        <StyledVector />
+        <StyledVector
+          disabled={isFirstPage}
+        />
         <ButtonText>
           Previous
         </ButtonText>
@@ -44,28 +51,31 @@ export const Pagination = () => {
       </PageText>
       <Button
         onClick={() => dispatch(goToPage({ page: pageNumber + 1 }))}
-        disabled={pageNumber === totalPages}
+        disabled={isLastPage}
       >
         <ButtonText>
           Next
         </ButtonText>
         <StyledVector
           right="true"
+          disabled={isLastPage}
         />
       </Button>
       <Button
         onClick={() => dispatch(goToPage({ page: totalPages }))}
-        disabled={pageNumber === totalPages}
+        disabled={isLastPage}
       >
         <ButtonText>
           Last
         </ButtonText>
         <StyledVector
           right="true"
+          disabled={isLastPage}
         />
         <StyledVector
           right="true"
           mobile="true"
+          disabled={isLastPage}
         />
       </Button>
     </Wrapper>

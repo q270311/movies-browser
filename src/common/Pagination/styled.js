@@ -8,7 +8,9 @@ export const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   padding: 40px 0 103px 0;
-
+  position: fixed;
+  bottom: 0;
+  
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
     padding-bottom: 39px;
   }
@@ -30,13 +32,12 @@ export const Button = styled.button`
   
   &:hover {
     filter: brightness(105%);
-    transform: scale(1.01);
   }
 
   &:disabled {
     background-color: ${({ theme }) => theme.color.mystic};
     color: ${({ theme }) => theme.color.woodsmoke};
-    cursor: default;
+    cursor: not-allowed;
 
     &:hover {
       filter: none;
