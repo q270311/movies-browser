@@ -8,8 +8,8 @@ export const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   padding: 40px 0 103px 0;
-  position: static;
-
+  bottom: 0;
+  
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
     padding-bottom: 39px;
   }
