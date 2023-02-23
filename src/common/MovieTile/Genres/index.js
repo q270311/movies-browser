@@ -6,19 +6,17 @@ import { selectGenres } from '../../../features/movieDatabaseSlice';
 
 export const Genres = ({ genres }) => {
   const genresDictionary = useSelector(selectGenres);
-
   return (
     <Wrapper>
       {genres.map(genre => {
-        return(
+        const words = genresDictionary.filter(word => word.id === genre);
+        return (
           <Genre key={nanoid()}>
-            {genresDictionary.filter(({id}) => genre)[0].name} 
+            {words[0].name}
           </Genre>
         )
       }
       )}
     </Wrapper>
   )
-}
-
-  ;
+};
