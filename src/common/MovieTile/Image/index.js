@@ -1,4 +1,5 @@
 import { Poster, ImageWrapper } from "./styled";
+import noPoster from "./noPoster.svg";
 
 export const Image = ({ posterPath }) => {
   const secureBaseUrl = "https://image.tmdb.org/t/p/w300";
@@ -6,8 +7,12 @@ export const Image = ({ posterPath }) => {
     <ImageWrapper>
       <Poster
         alt="movie poster"
-        src={`${secureBaseUrl}${posterPath}`}
+        src={
+          posterPath ?
+            `${secureBaseUrl}${posterPath}` :
+            `${noPoster}`
+        }
       />
     </ImageWrapper>
   )
-}
+};
