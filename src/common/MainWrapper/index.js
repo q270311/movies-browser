@@ -1,11 +1,11 @@
 import { PageWrapper, Title, Subtitle } from "./styled";
 import Header from "../Header";
 
-export const MainWrapper = ({ content, extraContent }) => (
+export const MainWrapper = ({ content, extraContent, title }) => (
   <>
     <Header />
     <PageWrapper>
-      <Title>Popular movies</Title>
+      <Title>{title}</Title>
       {content}
       <Subtitle>Cast</Subtitle>
       {extraContent}
