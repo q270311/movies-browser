@@ -5,11 +5,15 @@ export const Tile = styled.div`
   flex-direction: column;
   background-color: ${({ theme }) => theme.color.white};
   box-shadow: 0px 4px 12px ${({ theme }) => theme.color.shadow};
-  margin: 16px;
   min-width: 324px;
   height: auto;
   border-radius: 5px;
   padding: 16px;
+  transition: all 1s linear;
+
+  &:hover {
+    transform: scale(1.05)
+  }
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
     min-width: 288px;
