@@ -1,7 +1,10 @@
 import { StyledIcon, Wrapper } from "./styled";
+import { MainWrapper } from "../MainWrapper"
 
 export const NoResults = () => (
-  <Wrapper>
-    <StyledIcon />
-  </Wrapper>
+  <MainWrapper content={
+    <Wrapper>
+      <StyledIcon />
+    </Wrapper>
+  } />
 );
