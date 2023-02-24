@@ -5,9 +5,13 @@ export const MainWrapper = ({ content, extraContent, title, subtitle }) => (
   <>
     <Header />
     <PageWrapper>
-      <Title>{title}</Title>
+      <Title>
+        {title}
+      </Title>
       {content}
-      <Subtitle>{subtitle}</Subtitle>
+      <Subtitle>
+        {subtitle}
+      </Subtitle>
       {extraContent}
     </PageWrapper>
   </>
