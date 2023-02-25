@@ -4,6 +4,7 @@ import { ReactComponent as Error } from "./error.svg";
 export const Wrapper = styled.div`
   margin: 195px auto 0 auto;
   text-align: center;
+  height: 100vh;
   
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
     margin-top: 100px;
