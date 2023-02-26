@@ -1,6 +1,5 @@
-import { Routes ,Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { toMovieDetails, toMoviesList, toPeopleList, toPersonDetails } from "./routes";
-import Header from "./common/Header";
 import MoviesList from "./features/moviesList";
 
 function App() {
