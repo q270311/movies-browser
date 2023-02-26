@@ -11,6 +11,7 @@ function App() {
           <Route path={toMovieDetails()} element="{<MovieDetails />}" />
           <Route path={toPersonDetails()} element="{<PersonDetails />}" />
           <Route path="/" element={<Navigate to={toMoviesList()} />} />
+          <Route path="/movies-browser" element={<Navigate to={toMoviesList()} />} />          
       </Routes>
     </>
   );
