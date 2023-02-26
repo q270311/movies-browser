@@ -3,7 +3,7 @@ import { Wrapper } from "./styled";
 import { Pagination } from "../../common/Pagination";
 import { MovieTile } from "../../common/MovieTile"
 import { selectData, selectStatus } from '../movieDatabaseSlice';
-import { Loader } from "../../common/Loader";
+import Loader from "../../common/Loader";
 import { Error } from "../../common/Error";
 import { MainWrapper } from "../../common/MainWrapper";
 

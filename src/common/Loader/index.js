@@ -1,10 +1,12 @@
 import { StyledIcon, Wrapper } from "./styled";
 import { MainWrapper } from "../MainWrapper";
 
-export const Loader = () => (
+const Loader = () => (
   <MainWrapper content={
     <Wrapper>
       <StyledIcon />
     </Wrapper>
   } />
 );
+
+export default Loader;
