@@ -6,7 +6,7 @@ import { GlobalStyle } from "./GlobalStyle";
 import { theme } from "./theme";
 import { ThemeProvider } from "styled-components";
 import { Provider } from "react-redux";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import store from './store';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -15,9 +15,9 @@ root.render(
     <Provider store={store}>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <BrowserRouter basename="/movies-browser">
+        <HashRouter>
           <App />
-        </BrowserRouter>
+        </HashRouter>
       </ThemeProvider>
     </Provider>
   </React.StrictMode>
