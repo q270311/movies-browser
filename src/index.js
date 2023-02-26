@@ -15,7 +15,7 @@ root.render(
     <Provider store={store}>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <BrowserRouter>
+        <BrowserRouter basename="/movies-browser">
           <App />
         </BrowserRouter>
       </ThemeProvider>
