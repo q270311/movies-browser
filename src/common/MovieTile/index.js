@@ -1,5 +1,5 @@
 import { Tile, Description, VotesWrapper, Details } from "./styled";
-import { Image } from "./Image";
+import { Image, PersonImage } from "./Image";
 import { Genres } from "./Genres";
 import { Votes } from "./Votes";
 import { ExtendedVotes } from "./Votes";
@@ -52,7 +52,7 @@ export const PersonDescriptionTile = () => (
     <Tile
       description
     >
-      <Image />
+      <PersonImage />
       <Description
         description
       >
