@@ -20,3 +20,24 @@ export const AdditionalInfo = ({ firstValue, secondValue }) => (
     </Paragraph>
   </Wrapper>
 );
+
+export const PersonAdditionalInfo = ({ firstValue, secondValue }) => (
+  <Wrapper>
+    <Paragraph>
+      <Attribute>
+        Production:&nbsp;
+      </Attribute>
+      <Value>
+        {firstValue}
+      </Value>
+    </Paragraph>
+    <Paragraph>
+      <Attribute>
+        Release date:&nbsp;
+      </Attribute>
+      <Value>
+        {secondValue}
+      </Value>
+    </Paragraph>
+  </Wrapper>
+);
