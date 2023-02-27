@@ -5,10 +5,12 @@ import {
   useReplaceQueryParameter,
 } from "../queryParameters";
 import searchQueryParamName from "../searchQueryParamName.js";
+import { useLocation } from "react-router";
 
 const Search = () => {
   const query = useQueryParameter(searchQueryParamName);
   const replaceQueryParameter = useReplaceQueryParameter();
+  const location = useLocation();
 
   const onInputChange = ({ target }) => {
     replaceQueryParameter({
@@ -20,7 +22,15 @@ const Search = () => {
   return (
     <SearchWrapper>
       <SearchIcon src={search} />
-      <SearchInput onChange={onInputChange} value={query || ""} />
+      <SearchInput
+        onChange={onInputChange}
+        value={query || ""}
+        placeholder={`${
+          location.pathname.includes("movies")
+            ? "Search for movies..."
+            : " Search for people..."
+        }`}
+      />
     </SearchWrapper>
   );
 };
