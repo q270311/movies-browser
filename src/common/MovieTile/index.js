@@ -3,7 +3,7 @@ import { Image } from "./Image";
 import { Genres } from "./Genres";
 import { Votes } from "./Votes";
 import { ExtendedVotes } from "./Votes";
-import { AdditionalInfo } from "./AdditionalInfo";
+import { AdditionalInfo, PersonAdditionalInfo } from "./AdditionalInfo";
 import { MainInfo } from "./MainInfo";
 import { DetailsMainInfo } from "./MainInfo";
 
@@ -57,10 +57,10 @@ export const PersonDescriptionTile = () => (
         description
       >
         <DetailsMainInfo />
-        <AdditionalInfo
-        />
+        <PersonAdditionalInfo />
       </Description>
       <Details>
+        Liu Yifei was born in Wuhan, Hubei, Province of China on August 25th, 1987. She began modeling at the age of 8 and was trained in singing, dancing and the piano. Moving to the United States at 10 with her mother, Liu lived there for four years.
       </Details>
     </Tile>
   </>
