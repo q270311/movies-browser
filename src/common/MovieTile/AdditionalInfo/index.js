@@ -22,20 +22,20 @@ export const AdditionalInfo = ({ firstValue, secondValue }) => (
 );
 
 export const PersonAdditionalInfo = ({ firstValue, secondValue }) => (
-  <Wrapper>
-    <Paragraph>
+  <Wrapper person>
+    <Paragraph person>
       <Attribute>
         Date of birth:&nbsp;
       </Attribute>
-      <Attribute>
+      <Attribute person>
         Birth:&nbsp;
       </Attribute>
       <Value>
         {firstValue}
       </Value>
     </Paragraph>
-    <Paragraph>
-      <Attribute>
+    <Paragraph person>
+      <Attribute person>
         Place of birth:&nbsp;
       </Attribute>
       <Value>
