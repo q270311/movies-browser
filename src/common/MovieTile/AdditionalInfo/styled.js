@@ -22,6 +22,10 @@ export const Wrapper = styled.div`
 export const Paragraph = styled.div`
   display: inline-flex;
   font-size: 18px;
+
+  ${({ person }) => person && css`
+  flex-wrap: wrap;
+  `}
 `;
 
 export const Attribute = styled.p`
@@ -31,6 +35,13 @@ export const Attribute = styled.p`
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
     display: none;
   }
+
+  ${({ person }) => person && css`
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+      display: block;
+      font-size: 12px;
+    }
+  `}
 `;
 
 export const Value = styled.p`
