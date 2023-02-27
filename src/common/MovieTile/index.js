@@ -10,11 +10,21 @@ import { DetailsMainInfo } from "./MainInfo";
 export const MovieTile = ({ posterPath, title, year, genres, voteAverage, voteCount }) => (
   <>
     <Tile>
-      <Image posterPath={posterPath} />
+      <Image
+        posterPath={posterPath}
+      />
       <Description>
-        <MainInfo title={title} year={year} />
-        <Genres genres={genres} />
-        <Votes voteAverage={voteAverage} voteCount={voteCount} />
+        <MainInfo
+          title={title}
+          year={year}
+        />
+        <Genres
+          genres={genres}
+        />
+        <Votes
+          voteAverage={voteAverage}
+          voteCount={voteCount}
+        />
       </Description>
     </Tile>
   </>
@@ -56,7 +66,9 @@ export const PersonDescriptionTile = () => (
       <Description
         description
       >
-        <DetailsMainInfo title={"Liu Yifei"} />
+        <DetailsMainInfo
+          title={"Liu Yifei"}
+        />
         <PersonAdditionalInfo
           firstValue={"25.08.1987"}
           secondValue={"Wuhan, Hubei, China"}
