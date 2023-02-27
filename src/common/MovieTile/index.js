@@ -46,3 +46,22 @@ export const MovieDescriptionTile = () => (
     </Tile>
   </>
 );
+
+export const PersonDescriptionTile = () => (
+  <>
+    <Tile
+      description
+    >
+      <Image />
+      <Description
+        description
+      >
+        <DetailsMainInfo />
+        <AdditionalInfo
+        />
+      </Description>
+      <Details>
+      </Details>
+    </Tile>
+  </>
+);
