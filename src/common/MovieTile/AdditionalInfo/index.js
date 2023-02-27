@@ -27,7 +27,7 @@ export const PersonAdditionalInfo = ({ firstValue, secondValue }) => (
       <Attribute>
         Date of birth:&nbsp;
       </Attribute>
-      <Attribute person>
+      <Attribute person mobile>
         Birth:&nbsp;
       </Attribute>
       <Value>
