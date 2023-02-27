@@ -7,7 +7,7 @@ import { AdditionalInfo } from "./AdditionalInfo";
 import { MainInfo } from "./MainInfo";
 import { DetailsMainInfo } from "./MainInfo";
 
-export const MovieTile = ({posterPath, title, year, genres, voteAverage, voteCount }) => (
+export const MovieTile = ({ posterPath, title, year, genres, voteAverage, voteCount }) => (
   <>
     <Tile>
       <Image posterPath={posterPath} />
@@ -30,7 +30,10 @@ export const MovieDescriptionTile = () => (
         description
       >
         <DetailsMainInfo />
-        <AdditionalInfo />
+        <AdditionalInfo
+          firstValue={"China USA"}
+          secondValue={"24.10.2022"}
+        />
         <Genres />
         <VotesWrapper>
           <ExtendedVotes />
