@@ -24,7 +24,7 @@ export const Paragraph = styled.div`
   font-size: 18px;
 
   ${({ person }) => person && css`
-  flex-wrap: wrap;
+    flex-wrap: wrap;
   `}
 `;
 
@@ -41,6 +41,10 @@ export const Attribute = styled.p`
       display: block;
       font-size: 12px;
     }
+  `}
+
+  ${({ mobile }) => mobile && css`
+    display: none;
   `}
 `;
 
