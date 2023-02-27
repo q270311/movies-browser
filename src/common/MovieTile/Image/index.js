@@ -1,5 +1,6 @@
 import { Poster, ImageWrapper } from "./styled";
 import noPoster from "./noPoster.svg";
+import noPerson from "./noPerson.svg";
 
 export const Image = ({ posterPath }) => {
   const secureBaseUrl = "https://image.tmdb.org/t/p/w300";
@@ -11,6 +12,22 @@ export const Image = ({ posterPath }) => {
           posterPath ?
             `${secureBaseUrl}${posterPath}` :
             `${noPoster}`
+        }
+      />
+    </ImageWrapper>
+  )
+};
+
+export const PersonImage = ({ posterPath }) => {
+  const secureBaseUrl = "https://image.tmdb.org/t/p/w300";
+  return (
+    <ImageWrapper>
+      <Poster
+        alt="person poster"
+        src={
+          posterPath ?
+            `${secureBaseUrl}${posterPath}` :
+            `${noPerson}`
         }
       />
     </ImageWrapper>
