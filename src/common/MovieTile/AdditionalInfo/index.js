@@ -25,7 +25,10 @@ export const PersonAdditionalInfo = ({ firstValue, secondValue }) => (
   <Wrapper>
     <Paragraph>
       <Attribute>
-        Production:&nbsp;
+        Date of birth:&nbsp;
+      </Attribute>
+      <Attribute>
+        Birth:&nbsp;
       </Attribute>
       <Value>
         {firstValue}
@@ -33,7 +36,7 @@ export const PersonAdditionalInfo = ({ firstValue, secondValue }) => (
     </Paragraph>
     <Paragraph>
       <Attribute>
-        Release date:&nbsp;
+        Place of birth:&nbsp;
       </Attribute>
       <Value>
         {secondValue}
