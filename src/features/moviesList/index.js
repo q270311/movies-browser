@@ -1,14 +1,14 @@
 import { useSelector } from "react-redux";
 import { Wrapper } from "./styled";
-import { Pagination } from "../../common/Pagination";
+//import { Pagination } from "../../common/Pagination";
 import { MovieTile } from "../../common/MovieTile"
-import { selectData, selectStatus } from '../movieDatabaseSlice';
+import { selectMovies, selectStatus } from '../movieListSlice';
 import Loader from "../../common/Loader";
 import { Error } from "../../common/Error";
 import { MainWrapper } from "../../common/MainWrapper";
 
 const MoviesList = () => {
-    const popularMovies = useSelector(selectData);
+    const popularMovies = useSelector(selectMovies);
     const status = useSelector(selectStatus);
 
     return (
@@ -35,7 +35,7 @@ const MoviesList = () => {
                         }
                         title={"Popular movies"}
                     />
-                    <Pagination />
+                    {/* <Pagination /> */}
                 </>
     );
 };
