@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 
 export const Wrapper = styled.div`
   display: flex;
@@ -9,11 +9,23 @@ export const Wrapper = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
     margin: 8px 0 0 0;
   }
+  
+  ${({ person }) => person && css`
+    margin: 0 0 8px 0;
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+      margin: 12px 0 12px 0;
+    }
+  `}
 `;
 
 export const Paragraph = styled.div`
   display: inline-flex;
   font-size: 18px;
+
+  ${({ person }) => person && css`
+    flex-wrap: wrap;
+  `}
 `;
 
 export const Attribute = styled.p`
@@ -23,6 +35,17 @@ export const Attribute = styled.p`
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
     display: none;
   }
+
+  ${({ person }) => person && css`
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+      display: block;
+      font-size: 12px;
+    }
+  `}
+
+  ${({ mobile }) => mobile && css`
+    display: none;
+  `}
 `;
 
 export const Value = styled.p`

@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { Wrapper } from "./styled";
 import { Pagination } from "../../common/Pagination";
-import { MovieTile } from "../../common/MovieTile"
+import { MovieTile } from "../../common/Tiles"
 import { selectData, selectStatus } from '../movieDatabaseSlice';
 import Loader from "../../common/Loader";
 import { Error } from "../../common/Error";
