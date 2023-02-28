@@ -1,18 +1,13 @@
 import { Wrapper, Button, StyledVector, ButtonText, Text, PageText } from "./styled";
-import { useSelector, useDispatch } from "react-redux";
-import { selectPage, selectTotalPages, goToPage } from '../../features/movieDatabaseSlice';
 
-export const Pagination = () => {
-  const pageNumber = useSelector(selectPage);
-  const totalPages = useSelector(selectTotalPages);
-  const dispatch = useDispatch();
+export const Pagination = ({ pageNumber, totalPages, goToFirstPage, goToNextPage, goToPreviousPage, goToLastPage }) => {
   const isFirstPage = pageNumber === 1;
   const isLastPage = pageNumber === totalPages;
 
   return (
     <Wrapper>
       <Button
-        onClick={() => dispatch(goToPage({ page: 1 }))}
+        onClick={goToFirstPage}
         disabled={isFirstPage}
       >
         <StyledVector
@@ -27,7 +22,7 @@ export const Pagination = () => {
         </ButtonText>
       </Button>
       <Button
-        onClick={() => dispatch(goToPage({ page: pageNumber - 1 }))}
+        onClick={goToPreviousPage}
         disabled={isFirstPage}
       >
         <StyledVector
@@ -50,7 +45,7 @@ export const Pagination = () => {
         {totalPages}
       </PageText>
       <Button
-        onClick={() => dispatch(goToPage({ page: pageNumber + 1 }))}
+        onClick={goToNextPage}
         disabled={isLastPage}
       >
         <ButtonText>
@@ -62,7 +57,7 @@ export const Pagination = () => {
         />
       </Button>
       <Button
-        onClick={() => dispatch(goToPage({ page: totalPages }))}
+        onClick={goToLastPage}
         disabled={isLastPage}
       >
         <ButtonText>
