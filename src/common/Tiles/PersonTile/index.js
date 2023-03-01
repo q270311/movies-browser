@@ -1,16 +1,17 @@
 import { PersonTileContainer, PersonImage, PersonHeading, PersonLink } from "./styled";
+import noPerson from "../Image/noPerson.svg"
 
-const PersonTile = ({name, posterPath}) => {
+const PersonTile = ({ name, posterPath }) => {
   const secureBaseUrl = "https://image.tmdb.org/t/p/w185";
 
   return (
     <PersonTileContainer>
       <PersonLink to="/">
-        <PersonImage 
+        <PersonImage
           src={
             posterPath ?
               `${secureBaseUrl}${posterPath}` :
-              "brak zdjęcia"//`${noPoster}`
+              `${noPerson}`
           }
           alt="poster" />
         <PersonHeading>{name}</PersonHeading>
