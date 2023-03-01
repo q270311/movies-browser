@@ -8,6 +8,8 @@ export const Wrapper = styled.div`
   ${({ backdrop }) => backdrop && css`
     color: white;
     flex-direction: column;
+    position: absolute;
+    height: auto;
   `}
 `;
 
