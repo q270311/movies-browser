@@ -1,8 +1,9 @@
 import { MainWrapper } from "../../common/MainWrapper"
 import poster from "./backdrop.jpg";
-import { Backdrop, BackdropWrapper, PosterWrapper, Title } from "./styled";
+import { Backdrop, BackdropWrapper, PosterWrapper, Title, Wrapper } from "./styled";
 import { BackdropVotes } from "../../common/Tiles/Votes";
 import { MovieDescriptionTile } from "../../common/Tiles";
+import PersonTile from "../../common/Tiles/PersonTile";
 
 export const MoviePage = () => {
 
