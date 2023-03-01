@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   gap: 12px;
 
   ${({ backdrop }) => backdrop && css`
-    color: white;
+    color: ${({ theme }) => theme.color.white};
     flex-direction: column;
     position: absolute;
     height: auto;
@@ -52,7 +52,7 @@ export const Vote = styled.p`
   `}
 
   ${({ backdrop }) => backdrop && css`
-    color: white;
+    color: ${({ theme }) => theme.color.white};
     
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
       font-size: 14px;
