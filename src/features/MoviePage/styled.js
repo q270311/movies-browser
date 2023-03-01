@@ -19,6 +19,11 @@ export const Title = styled.h1`
   height: auto;
   font-size: 64px;
   font-weight: 600;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+    font-size: 24px;
+    bottom: 15%;
+  }
 `;
 
 export const PosterWrapper = styled.div`
