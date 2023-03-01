@@ -51,6 +51,12 @@ export const Vote = styled.p`
     font-size: 30px;
     font-weight: 500;
   `}
+
+  ${({ mobile }) => mobile && css`
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+    font-size: 10px;
+  }
+  `}
 `;
 
 export const Total = styled.p`
