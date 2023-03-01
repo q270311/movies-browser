@@ -38,6 +38,10 @@ export const PersonSubtitle = styled.p`
   font-size: 18px;
   color: ${({ theme }) => theme.color.waterloo};
   margin: 0;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+    font-size: 13px;
+  }
 `;
 
 export const PersonImage = styled.img`
