@@ -7,13 +7,25 @@ export const StyledHeader = styled.header`
   align-items: center;
   padding: 16px;
   width: 100%;
-  height: 94px;
+  height: auto;
   background: ${({ theme }) => theme.color.black};
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+    overflow: hidden;
+    hight: 142px;
+    flex-wrap: wrap;
+    padding: 18px;
+    width: 100%;
+  }
 `;
 
 export const Video = styled.img`
   width: 40px;
   height: 40px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+    width: 18px;
+  }
 `;
 
 export const MovieTitle = styled.h1`
@@ -28,6 +40,11 @@ export const MovieTitle = styled.h1`
   text-transform: capitalize;
   color: ${({ theme }) => theme.color.white};
   margin: 0;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+    font-size: 13px;
+    width: 90px;
+  }
 `;
 
 export const NavigationLink = styled(NavLink)`
@@ -35,4 +52,8 @@ export const NavigationLink = styled(NavLink)`
   text-decoration: none;
   gap: 16px;
   flex-wrap: wrap;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+    padding-left: 15px;
+  }
 `;
