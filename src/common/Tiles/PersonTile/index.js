@@ -1,12 +1,14 @@
-import { PersonTileContainer, PersonImage, PersonHeading, PersonLink } from "./styled";
+import { PersonTileContainer, PersonImage, PersonHeading, PersonSubtitle, PersonLink } from "./styled";
 import noPerson from "../Image/noPerson.svg"
 
-const PersonTile = ({ name, posterPath }) => {
+const PersonTile = ({ name, posterPath, subtitle }) => {
   const secureBaseUrl = "https://image.tmdb.org/t/p/w185";
 
   return (
     <PersonTileContainer>
-      <PersonLink to="/">
+      <PersonLink
+        to="/"
+      >
         <PersonImage
           src={
             posterPath ?
@@ -14,7 +16,12 @@ const PersonTile = ({ name, posterPath }) => {
               `${noPerson}`
           }
           alt="poster" />
-        <PersonHeading>{name}</PersonHeading>
+        <PersonHeading>
+          {name}
+        </PersonHeading>
+        <PersonSubtitle>
+          {subtitle}
+        </PersonSubtitle>
       </PersonLink>
     </PersonTileContainer>
   );
