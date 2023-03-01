@@ -71,6 +71,12 @@ export const Total = styled.p`
 
   ${({ backdrop }) => backdrop && css`
     font-size: 16px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+      display: flex;
+      align-self: flex-end;
+      font-size: 10px;
+    }
   `}
 `;
 
