@@ -5,10 +5,9 @@ export const PersonTileContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px 15px 65px 16px;
-  gap: 12px;
-  width: 208px;
-  height: 339px;
+  padding: 16px;
+  min-width: 136px;
+  height: auto;
   background: ${({ theme }) => theme.color.white};
   transition: 0.7s linear;
   filter: drop-shadow(0px 4px 12px rgba(186, 199, 213, 0.5));
@@ -16,31 +15,52 @@ export const PersonTileContainer = styled.div`
   &:hover {
     transform: scale(1.05);
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+    padding: 8px;
+  }
 `;
 
 export const PersonHeading = styled.h2`
-  width: 176px;
-  height: 29px;
-  font-style: normal;
+  width: 100%; 
   font-weight: 500;
   font-size: 22px;
   line-height: 130%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: ${({ theme }) => theme.color.woodsmoke};
   margin: 0;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+    font-size: 14px;
+  }
+`;
+
+export const PersonSubtitle = styled.p`
+  width: 100%;
+  font-weight: 400;
+  font-size: 18px;
+  color: ${({ theme }) => theme.color.waterloo};
+  margin: 0;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+    font-size: 13px;
+  }
 `;
 
 export const PersonImage = styled.img`
-  width: 176px;
-  height: 231px;
+  width: 100%;
   border-radius: 5px;
 `;
 
 export const PersonLink = styled(NavLink)`
+  width: 100%;  
   display: flex;
+  text-align: center;
   text-decoration: none;
   gap: 16px;
   flex-wrap: wrap;
+  word-break: break-word; 
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+    gap: 8px;
+  }
 `;

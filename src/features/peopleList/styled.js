@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
   margin-top: 24px;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 16px;
     margin-top: 12px;
   }
