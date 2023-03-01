@@ -25,6 +25,10 @@ export const PersonHeading = styled.h2`
   line-height: 130%;
   color: ${({ theme }) => theme.color.woodsmoke};
   margin: 0;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+    font-size: 14px;
+  }
 `;
 
 export const PersonSubtitle = styled.p`
