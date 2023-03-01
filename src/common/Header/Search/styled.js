@@ -13,6 +13,12 @@ export const SearchInput = styled.input`
   padding: 0;
   width: 100%;
   height: 24px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+    width: 100%;
+    height: 44px;
+    border-radius: 33px;
+  }
 `;
 
 export const SearchIcon = styled.img`
@@ -30,4 +36,10 @@ export const SearchWrapper = styled.div`
   width: 432px;
   height: 48px;
   border: 0;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+    width: 100%;
+    height: 44px;
+    border-radius: 33px;
+  }
 `;
