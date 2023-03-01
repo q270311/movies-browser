@@ -45,6 +45,11 @@ export const Vote = styled.p`
 
   ${({ backdrop }) => backdrop && css`
     color: white;
+    
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+      font-size: 14px;
+      align-self: flex-end;
+    }
   `}
 
   ${({ big }) => big && css`
