@@ -10,6 +10,12 @@ export const Wrapper = styled.div`
     flex-direction: column;
     position: absolute;
     height: auto;
+    left: 15%;
+    bottom: 10%;
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+      flex-direction: row;
+    }
   `}
 `;
 
