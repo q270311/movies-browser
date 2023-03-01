@@ -37,6 +37,24 @@ export const MoviePage = () => {
           secondValue={"24.10.2022"}
         />
       }
+      firstSubtitle={"Cast"}
+      firstSection={
+        <Wrapper>
+          <PersonTile
+            name={"name"}
+            subtitle={"subtitle"}
+          />
+        </Wrapper>
+      }
+      secondSubtitle={"Crew"}
+      secondSection={
+        <Wrapper>
+          <PersonTile
+            name={"name"}
+            subtitle={"subtitle"}
+          />
+        </Wrapper>
+      }
     />
   )
 };
