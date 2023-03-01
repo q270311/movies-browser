@@ -61,6 +61,7 @@ export const BackdropVotes = ({ voteAverage, voteCount }) => (
       </Vote>
       <Vote
         big
+        backdrop
       >
         {voteAverage}
       </Vote>
@@ -73,6 +74,7 @@ export const BackdropVotes = ({ voteAverage, voteCount }) => (
     <div>
       <Vote
         backdrop
+        mobile
       >
         {voteCount} votes
       </Vote>
