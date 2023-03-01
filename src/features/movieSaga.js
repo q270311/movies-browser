@@ -8,7 +8,7 @@ function* fetchMovieDetailsHandler() {
         const movieId = yield select(selectMovieId);
         const details = yield call(getMovieDetails, { page: movieId });
         const credits = yield call(getMovieCredits, { page: movieId });
-        yield put(fetchDataSuccess({details, credits}));/////
+        yield put(fetchDataSuccess({details, credits}));
     } catch (error) {
         yield put(fetchDataError());
     }
