@@ -7,7 +7,9 @@ export const MoviePage = () => (
   <MainWrapper
     backdrop={
       <BackdropWrapper>
-        <Title></Title>
+        <Title>
+          Plane
+        </Title>
         <PosterWrapper>
           <Backdrop
             src={poster}
