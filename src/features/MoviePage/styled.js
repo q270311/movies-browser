@@ -30,6 +30,15 @@ export const PosterWrapper = styled.div`
   display: flex;
   margin: 0 auto;
   width: 75%;
+  box-shadow: inset 0 0 40px 40px black;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+    box-shadow: inset 0 0 20px 20px black;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.smallDevice}px) {
+    box-shadow: inset 0 0 15px 15px black;
+  }
 `;
 
 export const Backdrop = styled.img`
