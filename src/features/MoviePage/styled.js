@@ -7,13 +7,13 @@ export const BackdropWrapper = styled.div`
   margin: 0 auto;
   justify-content: center;
   position: relative;
-  background-color: black;
+  background-color: ${({ theme }) => theme.color.backdropBlack};
   z-index: -1;
 `;
 
 export const Title = styled.h1`
   position: absolute;
-  color: white;
+  color: ${({ theme }) => theme.color.white};
   left: 15%;
   bottom: 20%;
   height: auto;
@@ -30,14 +30,14 @@ export const PosterWrapper = styled.div`
   display: flex;
   margin: 0 auto;
   width: 75%;
-  box-shadow: inset 0 0 40px 40px black;
+  box-shadow: inset 0 0 40px 40px ${({ theme }) => theme.color.backdropBlack};
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
-    box-shadow: inset 0 0 20px 20px black;
+    box-shadow: inset 0 0 20px 20px ${({ theme }) => theme.color.backdropBlack};
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoint.smallDevice}px) {
-    box-shadow: inset 0 0 15px 15px black;
+    box-shadow: inset 0 0 15px 15px ${({ theme }) => theme.color.backdropBlack};
   }
 `;
 
