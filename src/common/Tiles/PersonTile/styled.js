@@ -59,4 +59,8 @@ export const PersonLink = styled(NavLink)`
   gap: 16px;
   flex-wrap: wrap;
   word-break: break-word; 
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+    gap: 8px;
+  }
 `;
