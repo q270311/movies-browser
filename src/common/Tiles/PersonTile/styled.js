@@ -52,8 +52,11 @@ export const PersonImage = styled.img`
 `;
 
 export const PersonLink = styled(NavLink)`
+  width: 100%;  
   display: flex;
+  text-align: center;
   text-decoration: none;
   gap: 16px;
   flex-wrap: wrap;
+  word-break: break-word; 
 `;
