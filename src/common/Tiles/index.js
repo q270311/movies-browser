@@ -30,28 +30,37 @@ export const MovieTile = ({ posterPath, title, year, genres, voteAverage, voteCo
   </>
 );
 
-export const MovieDescriptionTile = () => (
+export const MovieDescriptionTile = ({ posterPath, title, year, genres, voteAverage, voteCount, description, firstValue, secondValue }) => (
   <>
     <Tile
       description
     >
-      <Image />
+      <Image
+        posterPath={posterPath}
+      />
       <Description
         description
       >
-        <DetailsMainInfo />
-        <AdditionalInfo
-          firstValue={"China USA"}
-          secondValue={"24.10.2022"}
+        <DetailsMainInfo
+          title={title}
+          year={year}
         />
-        <Genres />
+        <AdditionalInfo
+          firstValue={firstValue}
+          secondValue={secondValue}
+        />
+        <Genres
+        //genres={genres}
+        />
         <VotesWrapper>
-          <ExtendedVotes />
+          <ExtendedVotes
+            voteAverage={voteAverage}
+            voteCount={voteCount}
+          />
         </VotesWrapper>
       </Description>
       <Details>
-        A young Chinese maiden disguises herself as a male warrior in order to save her father.
-        Disguises herself as a male warrior in order to save her father.  A young Chinese maiden disguises herself as a male warrior in order to save her father.
+        {description}
       </Details>
     </Tile>
   </>

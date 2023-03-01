@@ -26,6 +26,10 @@ export const Tile = styled.div`
     display: grid;
     grid-template-columns: 1fr 2fr;
 
+    &:hover {
+      transform: scale(1)
+    }
+
     @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
       padding: 16px;
       grid-template-columns: 1fr 2fr;

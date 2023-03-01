@@ -28,6 +28,6 @@ export const Subtitle = styled.h2`
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
     font-size: 20px;
     margin-top: 24px;
-    margin-bottom: 0;
+    margin-bottom: 16px;
   }
 `;

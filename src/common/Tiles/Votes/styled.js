@@ -6,8 +6,16 @@ export const Wrapper = styled.div`
   gap: 12px;
 
   ${({ backdrop }) => backdrop && css`
-    color: white;
+    color: ${({ theme }) => theme.color.white};
     flex-direction: column;
+    position: absolute;
+    height: auto;
+    left: 15%;
+    bottom: 10%;
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+      flex-direction: row;
+    }
   `}
 `;
 
@@ -44,12 +52,23 @@ export const Vote = styled.p`
   `}
 
   ${({ backdrop }) => backdrop && css`
-    color: white;
+    color: ${({ theme }) => theme.color.white};
+    
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+      font-size: 14px;
+      align-self: flex-end;
+    }
   `}
 
   ${({ big }) => big && css`
     font-size: 30px;
     font-weight: 500;
+  `}
+
+  ${({ mobile }) => mobile && css`
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+    font-size: 10px;
+  }
   `}
 `;
 
@@ -65,6 +84,12 @@ export const Total = styled.p`
 
   ${({ backdrop }) => backdrop && css`
     font-size: 16px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+      display: flex;
+      align-self: flex-end;
+      font-size: 10px;
+    }
   `}
 `;
 
