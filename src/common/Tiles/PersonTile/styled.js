@@ -47,8 +47,7 @@ export const PersonSubtitle = styled.p`
 `;
 
 export const PersonImage = styled.img`
-  width: 176px;
-  height: 231px;
+  width: 100%;
   border-radius: 5px;
 `;
 
