@@ -7,6 +7,12 @@ export const NavList = styled.ul`
   align-items: center;
   list-style-type: none;
   padding: 0 311px 0 80px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+    padding: 20px 10px 20px 0;
+    margin: 0;
+    gap: 10px;
+  }
 `;
 
 export const NavItems = styled.li`
@@ -34,4 +40,12 @@ export const NavItems = styled.li`
       border: 1px solid ${({ theme }) => theme.color.white};
       border-radius: 24px;
     `}
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+    font-size: 12px;
+    line-height: 18px;
+    padding: 8px 12px;
+    width: 70px;
+    height: 34px;
+  }
 `;
