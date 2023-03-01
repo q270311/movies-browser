@@ -19,15 +19,10 @@ export const PersonTileContainer = styled.div`
 `;
 
 export const PersonHeading = styled.h2`
-  width: 176px;
-  height: 29px;
-  font-style: normal;
+  width: 100%; 
   font-weight: 500;
   font-size: 22px;
   line-height: 130%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: ${({ theme }) => theme.color.woodsmoke};
   margin: 0;
 `;
