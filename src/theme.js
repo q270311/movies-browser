@@ -11,8 +11,10 @@ export const theme = {
     blue: "#0044CC",
     waterloo: "#7E839A",
     storm: "#74788B",
-    shadow: "rgba(186, 199, 213, 0.5)"
+    shadow: "rgba(186, 199, 213, 0.5)",
+    backdropBlack: "#000"
   },
+  
   breakpoint: {
     mobileDevice: 767,
     smallDevice: 550,
