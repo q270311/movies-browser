@@ -31,7 +31,7 @@ export const getMovieDetails = async ({ movieID }) => {
         new Error(response.statusText);
     }
 
-    return await response.data.genres;
+    return await response.data;
 };
 export const getMovieCredits = async ({ movieID }) => {
     const response = await axios.get(`https://api.themoviedb.org/3/movie/${movieID}/credits?api_key=0a7a30a768304b21322288db13dcdb24&language=en-US`);
@@ -39,5 +39,5 @@ export const getMovieCredits = async ({ movieID }) => {
         new Error(response.statusText);
     }
 
-    return await response.data.genres;
+    return await response.data;
 };
