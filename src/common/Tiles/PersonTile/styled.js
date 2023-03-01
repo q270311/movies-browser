@@ -15,6 +15,10 @@ export const PersonTileContainer = styled.div`
   &:hover {
     transform: scale(1.05);
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+    padding: 8px;
+  }
 `;
 
 export const PersonHeading = styled.h2`
