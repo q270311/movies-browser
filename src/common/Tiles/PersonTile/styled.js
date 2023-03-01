@@ -32,6 +32,13 @@ export const PersonHeading = styled.h2`
   margin: 0;
 `;
 
+export const PersonSubtitle = styled.p`
+  width: 100%;
+  font-weight: 400;
+  font-size: 18px;
+  color: ${({ theme }) => theme.color.waterloo};
+`;
+
 export const PersonImage = styled.img`
   width: 176px;
   height: 231px;
