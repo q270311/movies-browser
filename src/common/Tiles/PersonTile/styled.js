@@ -37,6 +37,7 @@ export const PersonSubtitle = styled.p`
   font-weight: 400;
   font-size: 18px;
   color: ${({ theme }) => theme.color.waterloo};
+  margin: 0;
 `;
 
 export const PersonImage = styled.img`
