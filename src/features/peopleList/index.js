@@ -1,14 +1,15 @@
 import { useSelector, useDispatch } from "react-redux";
 import { Wrapper } from "./styled";
-import { Pagination } from "../../common/Pagination";
-import { MovieTile } from "../../common/Tiles"
-import { selectMovies, selectStatus, selectPage, selectTotalPages, goToPage } from '../movieListSlice';
+import { selectPeople, selectStatus, selectPage, selectTotalPages, goToPage } from '../peopleListSlice';
 import Loader from "../../common/Loader";
 import { Error } from "../../common/Error";
 import { MainWrapper } from "../../common/MainWrapper";
+import { Pagination } from "../../common/Pagination";
+import PersonTile from "../../common/Tiles/PersonTile";
 
-const MoviesList = () => {
-    const popularMovies = useSelector(selectMovies);
+
+const PeopleList = () => {
+    const popularPeople = useSelector(selectPeople);
     const status = useSelector(selectStatus);
     const pageNumber = useSelector(selectPage);
     const totalPages = useSelector(selectTotalPages);
@@ -23,20 +24,16 @@ const MoviesList = () => {
                     <MainWrapper
                         content={
                             <Wrapper>
-                                {popularMovies.map(movie => (
-                                    <MovieTile
-                                        key={movie.id}
-                                        posterPath={movie.poster_path}
-                                        title={movie.title}
-                                        year={(movie.release_date || "").substring(0, 4)}
-                                        genres={movie.genre_ids}
-                                        voteAverage={movie.vote_average}
-                                        voteCount={movie.vote_count}
+                                {popularPeople.map(person => (
+                                    <PersonTile
+                                        key={person.id}
+                                        name={person.name}
+                                        posterPath={person.profile_path}
                                     />
                                 ))}
                             </Wrapper>
                         }
-                        title={"Popular movies"}
+                        title={"Popular people"}
                     />
                     <Pagination
                         pageNumber={pageNumber}
@@ -50,4 +47,4 @@ const MoviesList = () => {
     );
 };
 
-export default MoviesList;
+export default PeopleList;

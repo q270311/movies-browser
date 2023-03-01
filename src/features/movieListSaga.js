@@ -1,5 +1,5 @@
 import { call, put, takeLatest, select } from "redux-saga/effects";
-import { fetchDataSuccess, fetchDataError, goToPage, selectPage } from "./movieDatabaseSlice";
+import { fetchDataSuccess, fetchDataError, goToPage, selectPage } from "./movieListSlice";
 import { getGenres, getMoviePopular } from "../getDataFromMovieDB";
 
 function* fetchMoviePopularHandler() {

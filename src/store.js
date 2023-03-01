@@ -1,13 +1,15 @@
 import { configureStore } from "@reduxjs/toolkit";
 import createSagaMiddleware from "redux-saga";
 import rootSaga from "./rootSaga";
-import movieDatabaseReducer from './features/movieDatabaseSlice';
+import movieListReducer from './features/movieListSlice';
+import peopleListReducer from './features/peopleListSlice';
 
 const sagaMiddleware= createSagaMiddleware();
 
 const store = configureStore({
     reducer: {
-        movieDatabase: movieDatabaseReducer,
+        movieData: movieListReducer,
+        peopleData: peopleListReducer,
     },
     middleware: [sagaMiddleware],
 });

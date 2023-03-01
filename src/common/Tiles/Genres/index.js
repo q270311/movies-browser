@@ -1,7 +1,7 @@
 import { Wrapper, Genre } from "./styled";
 import { nanoid } from "@reduxjs/toolkit";
 import { useSelector } from "react-redux";
-import { selectGenres } from '../../../features/movieDatabaseSlice';
+import { selectGenres } from '../../../features/movieListSlice';
 
 
 export const Genres = ({ genres }) => {
