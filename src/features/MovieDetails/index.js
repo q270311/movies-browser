@@ -5,7 +5,7 @@ import { BackdropVotes } from "../../common/Tiles/Votes";
 import { MovieDescriptionTile } from "../../common/Tiles";
 import PersonTile from "../../common/Tiles/PersonTile";
 
-export const MoviePage = () => {
+export const MovieDetails = () => {
 
   return (
     <MainWrapper
