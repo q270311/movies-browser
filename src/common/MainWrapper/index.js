@@ -1,7 +1,7 @@
 import { PageWrapper, Title, Subtitle } from "./styled";
 import Header from "../Header";
 
-export const MainWrapper = ({ content, extraContent, title, subtitle }) => (
+export const MainWrapper = ({ content, title, firstSubtitle, secondSubtitle, firstSection, secondSection }) => (
   <>
     <Header />
     <PageWrapper>
@@ -10,9 +10,13 @@ export const MainWrapper = ({ content, extraContent, title, subtitle }) => (
       </Title>
       {content}
       <Subtitle>
-        {subtitle}
+        {firstSubtitle}
       </Subtitle>
-      {extraContent}
+      {firstSection}
+      <Subtitle>
+        {secondSubtitle}
+      </Subtitle>
+      {secondSection}
     </PageWrapper>
   </>
 );
