@@ -50,7 +50,7 @@ export const MovieDescriptionTile = ({ posterPath, title, year, genres, voteAver
           secondValue={secondValue}
         />
         <Genres
-        //genres={genres}
+          genres={genres}
         />
         <VotesWrapper>
           <ExtendedVotes
