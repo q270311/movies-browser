@@ -13,7 +13,6 @@ const movieSlice = createSlice({
         fetchDataSuccess: (state, { payload }) => {
             state.status = "loading";
             state.details = payload.details;
-            console.log(state.details)
             state.cast = payload.credits.cast;
             state.crew = payload.credits.crew;
             state.status = "success";
