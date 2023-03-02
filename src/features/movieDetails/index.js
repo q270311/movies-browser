@@ -1,77 +1,100 @@
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { getDetailsForMovie, selectDetails, selectCast, selectCrew } from '../movieSlice';
+import { getDetailsForMovie, selectDetails, selectCast, selectCrew, selectStatus } from '../movieSlice';
 import { MainWrapper } from "../../common/MainWrapper";
-import poster from "./backdrop.jpg";
 import { Backdrop, BackdropWrapper, PosterWrapper, Title, Wrapper } from "./styled";
 import { BackdropVotes } from "../../common/Tiles/Votes";
 import { MovieDescriptionTile } from "../../common/Tiles";
 import PersonTile from "../../common/Tiles/PersonTile";
+import Loader from "../../common/Loader";
+import { Error } from "../../common/Error";
+import { nanoid } from "@reduxjs/toolkit";
 
 const MovieDetails = () => {
+    const secureBaseUrl = "https://image.tmdb.org/t/p/original";
     const dispatch = useDispatch();
     const { id } = useParams();
 
     useEffect(() => {
         dispatch(getDetailsForMovie({ movieId: id }));
     }, [id, dispatch]);
+    const status = useSelector(selectStatus);
     const details = useSelector(selectDetails);
-    //const cast = useSelector(selectCast);
-    //const crew = useSelector(selectCrew);
+    const cast = useSelector(selectCast);
+    const crew = useSelector(selectCrew);
 
     return (
-        <p>{details.original_title}</p>
-
-        /* <MainWrapper
-            backdrop={
-                <BackdropWrapper>
-                    <Title>
-                        {details.original_title}
-                    </Title>
-                    <PosterWrapper>
-                        <Backdrop
-                            src={poster}
+        status === "loading" ?
+            <Loader /> :
+            status === "error" ?
+                <Error /> :
+                <MainWrapper
+                    backdrop={
+                        <BackdropWrapper>
+                            <Title>
+                                {details.original_title}
+                            </Title>
+                            <PosterWrapper>
+                                <Backdrop
+                                    src={
+                                        details.backdrop_path ?
+                                            `${secureBaseUrl}${details.backdrop_path}` :
+                                            ""//`${noPerson}`
+                                    }
+                                    alt="backdrop"
+                                />
+                            </PosterWrapper>
+                            <BackdropVotes
+                                voteAverage={details.vote_average}
+                                voteCount={details.vote_count}
+                            />
+                        </BackdropWrapper>
+                    }
+                    content={
+                        <MovieDescriptionTile
+                            posterPath={`${secureBaseUrl}${details.poster_path}`}
+                            title={details.original_title}
+                            year={(details.release_date || "").substring(0, 4)}
+                            genres={
+                                (details.genres).map(genre => genre.name)
+                            }
+                            voteAverage={details.vote_average}
+                            voteCount={details.vote_count}
+                            description={details.overview}
+                            firstValue={"China USA"}
+                            secondValue={details.release_date}
                         />
-                    </PosterWrapper>
-                    <BackdropVotes
-                        voteAverage={"5"}
-                        voteCount={"100"}
-                    />
-                </BackdropWrapper>
-            } */
-            /* content={
-                <MovieDescriptionTile
-                    //posterPath={posterPath}
-                    title={"title"}
-                    year={("year" || "").substring(0, 4)}
-                    //genres={"genres"}
-                    voteAverage={"5"}
-                    voteCount={"100"}
-                    description={"A young Chinese maiden disguises..."}
-                    firstValue={"China USA"}
-                    secondValue={"24.10.2022"}
+                    }
+                    firstSubtitle={`Cast (${cast.length})`}
+                    firstSection={
+                        <Wrapper>
+                            {cast.map(person => (
+                                <PersonTile
+                                    key={nanoid()}
+                                    id={person.id}                                    
+                                    name={person.name}
+                                    subtitle={person.character}
+                                    posterPath={person.profile_path}
+                                />
+                            ))}
+                        </Wrapper>
+                    }
+                    secondSubtitle={`Crew (${crew.length})`}
+                       secondSection={
+                           <Wrapper>
+                               {crew.map(person => (
+                                <PersonTile
+                                    key={nanoid()}
+                                    id={person.id}                                    
+                                    name={person.name}
+                                    subtitle={person.job}
+                                    posterPath={person.profile_path}
+                                />
+                            ))}
+                           </Wrapper>
+                       } 
                 />
-            }
-            firstSubtitle={`Cast (${cast.length})`}
-            firstSection={
-                <Wrapper>
-                    <PersonTile
-                        name={"name"}
-                        subtitle={"subtitle"}
-                    />
-                </Wrapper>
-            }
-            secondSubtitle={`Crew (${crew.length})`}
-            secondSection={
-                <Wrapper>
-                    <PersonTile
-                        name={"name"}
-                        subtitle={"subtitle"}
-                    />
-                </Wrapper>
-            } 
-        />*/
     )
 }
 
