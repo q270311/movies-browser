@@ -6,6 +6,7 @@ import { selectMovies, selectStatus, selectPage, selectTotalPages, goToPage } fr
 import Loader from "../../common/Loader";
 import { Error } from "../../common/Error";
 import { MainWrapper } from "../../common/MainWrapper";
+import {StyledLink} from './styled';
 
 const MoviesList = () => {
     const popularMovies = useSelector(selectMovies);
@@ -24,15 +25,20 @@ const MoviesList = () => {
                         content={
                             <Wrapper>
                                 {popularMovies.map(movie => (
-                                    <MovieTile
+                                    <StyledLink 
+                                        to={`/movie/${movie.id}`}
                                         key={movie.id}
-                                        posterPath={movie.poster_path}
-                                        title={movie.title}
-                                        year={(movie.release_date || "").substring(0, 4)}
-                                        genres={movie.genre_ids}
-                                        voteAverage={movie.vote_average}
-                                        voteCount={movie.vote_count}
-                                    />
+                                    >
+                                        <MovieTile
+                                            key={movie.id}
+                                            posterPath={movie.poster_path}
+                                            title={movie.title}
+                                            year={(movie.release_date || "").substring(0, 4)}
+                                            genres={movie.genre_ids}
+                                            voteAverage={movie.vote_average}
+                                            voteCount={movie.vote_count}
+                                        />
+                                    </StyledLink>
                                 ))}
                             </Wrapper>
                         }

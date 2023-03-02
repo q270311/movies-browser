@@ -2,7 +2,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import { toMovieDetails, toMoviesList, toPeopleList, toPersonDetails } from "./routes";
 import MoviesList from "./features/moviesList";
 import PeopleList from "./features/peopleList";
-import { MovieDetails } from './features/MovieDetails';
+import MovieDetails  from './features/movieDetails';
 
 function App() {
   return (

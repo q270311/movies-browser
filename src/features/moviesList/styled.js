@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from 'react-router-dom';
 
 export const Wrapper = styled.div`  
   display: grid;
@@ -11,4 +12,9 @@ export const Wrapper = styled.div`
     gap: 16px;
     margin-top: 12px;
   }
+`;
+
+export const StyledLink = styled(Link)`
+    text-decoration: none;
+    color: ${({ theme }) => theme.color.black};
 `;
