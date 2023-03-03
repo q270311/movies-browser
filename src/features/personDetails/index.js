@@ -1,6 +1,14 @@
+import { MainWrapper } from "../../common/MainWrapper"
+import { PersonDescriptionTile } from "../../common/Tiles"
+
 export const PersonDetails = () => {
 
-  return(
-    <></>
+  return (
+    <>
+      <MainWrapper
+        content={
+          <PersonDescriptionTile />
+        } />
+    </>
   );
 };
