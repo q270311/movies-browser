@@ -59,7 +59,7 @@ const MovieDetails = () => {
                             voteAverage={details.vote_average}
                             voteCount={details.vote_count}
                             description={details.overview}
-                            firstValue={"China USA"}
+                            firstValue={(details.production_countries).map(country => `${country.name}, `)}
                             secondValue={details.release_date}
                         />
                     }
