@@ -16,6 +16,15 @@ export const PersonDetails = () => {
             <MovieTile />
           </Wrapper>
         }
+        secondSubtitle={"Movies - crew (4)"}
+        secondSection={
+          <Wrapper>
+            <MovieTile />
+            <MovieTile />
+            <MovieTile />
+            <MovieTile />
+          </Wrapper>
+        }
       />
     </>
   );
