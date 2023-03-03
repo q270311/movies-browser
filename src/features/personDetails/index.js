@@ -1,5 +1,6 @@
 import { MainWrapper } from "../../common/MainWrapper"
-import { PersonDescriptionTile } from "../../common/Tiles"
+import { MovieTile, PersonDescriptionTile } from "../../common/Tiles"
+import { Wrapper } from "../moviesList/styled";
 
 export const PersonDetails = () => {
 
@@ -8,7 +9,14 @@ export const PersonDetails = () => {
       <MainWrapper
         content={
           <PersonDescriptionTile />
-        } />
+        }
+        firstSubtitle={"Movies - cast (4)"}
+        firstSection={
+          <Wrapper>
+            <MovieTile />
+          </Wrapper>
+        }
+      />
     </>
   );
 };
