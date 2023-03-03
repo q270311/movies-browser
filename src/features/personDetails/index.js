@@ -16,27 +16,32 @@ export const PersonDetails = () => {
           //  profilePath={"posterPath"}
           />
         }
-        firstSubtitle={"Movies - cast (4)"}
+        firstSubtitle={"Movies - cast (length)"}
         firstSection={
           <Wrapper>
             <MovieTile
-              //  posterPath={"posterPath"}
+            //  posterPath={"posterPath"}
               title={"title"}
               year={"character (year)"}
-              //  genres={"genres"}
+            //  genres={"genres"}
               voteAverage={"voteAverage"}
               voteCount={"voteCount"}
 
             />
           </Wrapper>
         }
-        secondSubtitle={"Movies - crew (4)"}
+        secondSubtitle={"Movies - crew (length)"}
         secondSection={
           <Wrapper>
-            <MovieTile />
-            <MovieTile />
-            <MovieTile />
-            <MovieTile />
+            <MovieTile
+            //  posterPath={"posterPath"}
+              title={"title"}
+              year={"job (year)"}
+            //  genres={"genres"}
+              voteAverage={"voteAverage"}
+              voteCount={"voteCount"}
+
+            />
           </Wrapper>
         }
       />
