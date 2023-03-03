@@ -27,6 +27,7 @@ const PeopleList = () => {
                                 {popularPeople.map(person => (
                                     <PersonTile
                                         key={person.id}
+                                        id={person.id}
                                         name={person.name}
                                         posterPath={person.profile_path}
                                     />

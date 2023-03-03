@@ -1,14 +1,21 @@
 import { useSelector, useDispatch } from "react-redux";
 import { Wrapper } from "./styled";
 import { Pagination } from "../../common/Pagination";
-import { MovieTile } from "../../common/Tiles"
-import { selectMovies, selectStatus, selectPage, selectTotalPages, goToPage } from '../movieListSlice';
+import { MovieTile } from "../../common/Tiles";
+import { selectMovies, selectGenres, selectStatus, selectPage, selectTotalPages, goToPage } from '../movieListSlice';
 import Loader from "../../common/Loader";
 import { Error } from "../../common/Error";
 import { MainWrapper } from "../../common/MainWrapper";
-import {StyledLink} from './styled';
+import { StyledLink } from './styled';
+
+const getGenresNames = ({ ids, dictionary }) =>
+    ids.map(ids =>
+        dictionary.filter(word => word.id === ids)[0].name
+    )
+
 
 const MoviesList = () => {
+    const genresDictionary = useSelector(selectGenres);
     const popularMovies = useSelector(selectMovies);
     const status = useSelector(selectStatus);
     const pageNumber = useSelector(selectPage);
@@ -25,7 +32,7 @@ const MoviesList = () => {
                         content={
                             <Wrapper>
                                 {popularMovies.map(movie => (
-                                    <StyledLink 
+                                    <StyledLink
                                         to={`/movie/${movie.id}`}
                                         key={movie.id}
                                     >
@@ -34,7 +41,7 @@ const MoviesList = () => {
                                             posterPath={movie.poster_path}
                                             title={movie.title}
                                             year={(movie.release_date || "").substring(0, 4)}
-                                            genres={movie.genre_ids}
+                                            genres={getGenresNames({ ids: movie.genre_ids, dictionary: genresDictionary })}
                                             voteAverage={movie.vote_average}
                                             voteCount={movie.vote_count}
                                         />
