@@ -8,7 +8,13 @@ export const PersonDetails = () => {
     <>
       <MainWrapper
         content={
-          <PersonDescriptionTile />
+          <PersonDescriptionTile
+            title={"person.name"}
+            firstValue={"person.birthday"}
+            secondValue={"person.place_of_birth"}
+            description={"person.biography"}
+          //  profilePath={"posterPath"}
+          />
         }
         firstSubtitle={"Movies - cast (4)"}
         firstSection={
