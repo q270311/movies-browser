@@ -30,18 +30,14 @@ const MovieDetails = () => {
             status === "error" ?
                 <Error /> :
                 <MainWrapper
-                    backdrop={
+                    backdrop={!!details.backdrop_path && (
                         <BackdropWrapper>
                             <Title>
                                 {details.original_title}
                             </Title>
                             <PosterWrapper>
                                 <Backdrop
-                                    src={
-                                        details.backdrop_path ?
-                                            `${secureBaseUrl}${details.backdrop_path}` :
-                                            ""//`${noPerson}`
-                                    }
+                                    src={`${secureBaseUrl}${details.backdrop_path}`}
                                     alt="backdrop"
                                 />
                             </PosterWrapper>
@@ -50,6 +46,7 @@ const MovieDetails = () => {
                                 voteCount={details.vote_count}
                             />
                         </BackdropWrapper>
+                    )
                     }
                     content={
                         <MovieDescriptionTile
@@ -72,7 +69,7 @@ const MovieDetails = () => {
                             {cast.map(person => (
                                 <PersonTile
                                     key={nanoid()}
-                                    id={person.id}                                    
+                                    id={person.id}
                                     name={person.name}
                                     subtitle={person.character}
                                     posterPath={person.profile_path}
@@ -81,19 +78,19 @@ const MovieDetails = () => {
                         </Wrapper>
                     }
                     secondSubtitle={`Crew (${crew.length})`}
-                       secondSection={
-                           <Wrapper>
-                               {crew.map(person => (
+                    secondSection={
+                        <Wrapper>
+                            {crew.map(person => (
                                 <PersonTile
                                     key={nanoid()}
-                                    id={person.id}                                    
+                                    id={person.id}
                                     name={person.name}
                                     subtitle={person.job}
                                     posterPath={person.profile_path}
                                 />
                             ))}
-                           </Wrapper>
-                       } 
+                        </Wrapper>
+                    }
                 />
     )
 }
