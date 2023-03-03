@@ -16,8 +16,9 @@ const PersonDetails = () => {
     const status = useSelector(selectStatus);
     const details = useSelector(selectDetails);
     const cast = useSelector(selectCast);
-    console.log(cast);
     const crew = useSelector(selectCrew);
+    const castNumber = (cast.filter(({ title }) => title)).length;
+    const crewtNumber = (crew.filter(({ title }) => title)).length;
 
     return (
         status === "loading" ?
@@ -30,11 +31,11 @@ const PersonDetails = () => {
                     <p>Date of birth:{details.birthday}</p>
                     <p>Place of birth: {details.place_of_birth}</p>
                     <p>{details.biography}</p>
-                    <b>Movies - cast ({cast.length})</b>
+                    <b>Movies - cast ({castNumber})</b>
                     {
                         cast.map(film => <p>{film.title}</p>)
                     }
-                    <b>Movies - crew ({crew.length})</b>
+                    <b>Movies - crew ({crewtNumber})</b>
                     {
                         crew.map(film => <p>{film.title}</p>)
                     }
