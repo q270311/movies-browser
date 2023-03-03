@@ -19,7 +19,15 @@ export const PersonDetails = () => {
         firstSubtitle={"Movies - cast (4)"}
         firstSection={
           <Wrapper>
-            <MovieTile />
+            <MovieTile
+              //  posterPath={"posterPath"}
+              title={"title"}
+              year={"character (year)"}
+              //  genres={"genres"}
+              voteAverage={"voteAverage"}
+              voteCount={"voteCount"}
+
+            />
           </Wrapper>
         }
         secondSubtitle={"Movies - crew (4)"}
