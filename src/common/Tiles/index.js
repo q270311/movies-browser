@@ -66,25 +66,27 @@ export const MovieDescriptionTile = ({ posterPath, title, year, genres, voteAver
   </>
 );
 
-export const PersonDescriptionTile = () => (
+export const PersonDescriptionTile = ({ title, firstValue, secondValue, description, profilePath }) => (
   <>
     <Tile
       description
     >
-      <PersonImage />
+      <PersonImage
+        profilePath={profilePath}
+      />
       <Description
         description
       >
         <DetailsMainInfo
-          title={"Liu Yifei"}
+          title={title}
         />
         <PersonAdditionalInfo
-          firstValue={"25.08.1987"}
-          secondValue={"Wuhan, Hubei, China"}
+          firstValue={firstValue}
+          secondValue={secondValue}
         />
       </Description>
       <Details>
-        Liu Yifei was born in Wuhan, Hubei, Province of China on August 25th, 1987. She began modeling at the age of 8 and was trained in singing, dancing and the piano. Moving to the United States at 10 with her mother, Liu lived there for four years.
+        {description}
       </Details>
     </Tile>
   </>
