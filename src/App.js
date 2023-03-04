@@ -3,6 +3,7 @@ import { toMovieDetails, toMoviesList, toPeopleList, toPersonDetails } from "./r
 import MoviesList from "./features/moviesList";
 import PeopleList from "./features/peopleList";
 import MovieDetails  from './features/movieDetails';
+import PersonDetails  from './features/personDetails';
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
           <Route path={toMoviesList()} element={<MoviesList />} />
           <Route path={toPeopleList()} element={<PeopleList />} />
           <Route path={toMovieDetails()} element={<MovieDetails />} />
-          <Route path={toPersonDetails()} element="{<PersonDetails />}" />      
+          <Route path={toPersonDetails()} element={<PersonDetails />} />      
           <Route path="/" element={<Navigate to={toMoviesList()} />} />                    
       </Routes>
     </>

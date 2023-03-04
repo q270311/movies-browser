@@ -44,3 +44,19 @@ export const getMovieCredits = async ({ movieID }) => {
 
     return await response.data;
 };
+export const getPersonDetails = async ({ personID }) => {
+    const response = await axios.get(`${baseURL}/person/${personID}?api_key=${apiKey}&language=en-US`);
+    if (!response.ok) {
+        new Error(response.statusText);
+    }
+
+    return await response.data;
+};
+export const getPersonMovieCredits = async ({ personID }) => {
+    const response = await axios.get(`${baseURL}/person/${personID}/combined_credits?api_key=${apiKey}&language=en-US`);
+    if (!response.ok) {
+        new Error(response.statusText);
+    }
+
+    return await response.data;
+};
