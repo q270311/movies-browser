@@ -7,11 +7,12 @@ import { AdditionalInfo, PersonAdditionalInfo } from "./AdditionalInfo";
 import { MainInfo } from "./MainInfo";
 import { DetailsMainInfo } from "./MainInfo";
 
-export const MovieTile = ({ posterPath, title, year, genres, voteAverage, voteCount }) => (
+export const MovieTile = ({ posterPath, posterSize, title, year, genres, voteAverage, voteCount }) => (
   <>
     <Tile>
       <Image
         posterPath={posterPath}
+        posterSize={posterSize}
       />
       <Description>
         <MainInfo
@@ -30,13 +31,14 @@ export const MovieTile = ({ posterPath, title, year, genres, voteAverage, voteCo
   </>
 );
 
-export const MovieDescriptionTile = ({ posterPath, title, year, genres, voteAverage, voteCount, description, firstValue, secondValue }) => (
+export const MovieDescriptionTile = ({ posterPath, posterSize, title, year, genres, voteAverage, voteCount, description, firstValue, secondValue }) => (
   <>
     <Tile
       description
     >
       <Image
         posterPath={posterPath}
+        posterSize={posterSize}
       />
       <Description
         description
@@ -66,28 +68,32 @@ export const MovieDescriptionTile = ({ posterPath, title, year, genres, voteAver
   </>
 );
 
-export const PersonDescriptionTile = ({ title, firstValue, secondValue, description, profilePath }) => (
-  <>
-    <Tile
-      description
-    >
-      <PersonImage
-        profilePath={profilePath}
-      />
-      <Description
+export const PersonDescriptionTile = ({ title, firstValue, secondValue, description, profilePath, profileSize }) => {
+  
+  return (
+    <>
+      <Tile
         description
       >
-        <DetailsMainInfo
-          title={title}
+        <PersonImage
+          posterPath={profilePath}
+          posterSize={profileSize}
         />
-        <PersonAdditionalInfo
-          firstValue={firstValue}
-          secondValue={secondValue}
-        />
-      </Description>
-      <Details>
-        {description}
-      </Details>
-    </Tile>
-  </>
-);
+        <Description
+          description
+        >
+          <DetailsMainInfo
+            title={title}
+          />
+          <PersonAdditionalInfo
+            firstValue={firstValue}
+            secondValue={secondValue}
+          />
+        </Description>
+        <Details>
+          {description}
+        </Details>
+      </Tile>
+    </>
+  );
+}
