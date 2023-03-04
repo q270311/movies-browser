@@ -18,15 +18,16 @@ export const Image = ({ posterPath }) => {
   )
 };
 
-export const PersonImage = ({ posterPath }) => {
-  const secureBaseUrl = "https://image.tmdb.org/t/p/w300";
+export const PersonImage = ({ posterPath, posterSize }) => {
+  const secureBaseUrl = "https://image.tmdb.org/t/p";
+  
   return (
     <ImageWrapper>
       <Poster
         alt="person poster"
         src={
           posterPath ?
-            `${secureBaseUrl}${posterPath}` :
+            `${secureBaseUrl}${posterSize}${posterPath}` :
             `${noPerson}`
         }
       />
