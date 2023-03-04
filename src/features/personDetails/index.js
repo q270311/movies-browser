@@ -39,7 +39,7 @@ export const PersonDetails = () => {
                             title={details.name}
                             firstValue={details.birthday}
                             secondValue={details.place_of_birth}
-                            description={details.birthday}
+                            description={details.biography}
                             profileSize={"/h632"}
                             profilePath={details.profile_path}
                         />
