@@ -21,6 +21,7 @@ const movieSlice = createSlice({
             state.status = "error";
         },
         getDetailsForMovie: (state, { payload }) => {
+            state.status="loading";
             state.movieId = payload.movieId;
         },
     },
