@@ -1,4 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
+import { nanoid } from "@reduxjs/toolkit";
 import { Wrapper } from "./styled";
 import { Pagination } from "../../common/Pagination";
 import { MovieTile } from "../../common/Tiles";
@@ -34,10 +35,10 @@ const MoviesList = () => {
                                 {popularMovies.map(movie => (
                                     <StyledLink
                                         to={`/movie/${movie.id}`}
-                                        key={movie.id}
+                                        key={nanoid()}
                                     >
                                         <MovieTile
-                                            key={movie.id}
+                                            key={nanoid()}
                                             posterPath={movie.poster_path}
                                             title={movie.title}
                                             year={(movie.release_date || "").substring(0, 4)}
