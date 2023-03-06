@@ -45,9 +45,12 @@ export const MovieTitle = styled.h1`
   color: ${({ theme }) => theme.color.white};
   margin: 0;
 
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.tabletDevice}px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.smallDevice}px) {
     font-size: 13px;
-    width: 90px;
   }
 `;
 
