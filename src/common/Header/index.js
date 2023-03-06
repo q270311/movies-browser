@@ -14,10 +14,16 @@ const Header = () => {
     <Wrapper>
       <StyledHeader>
         <div>
-        <NavigationLink to="/movies-list">
-          <Video src={video} />
-          <MovieTitle>Movies Browser</MovieTitle>
-        </NavigationLink>
+          <NavigationLink
+            to="/movies-list"
+          >
+            <Video
+              src={video}
+            />
+            <MovieTitle>
+              Movies Browser
+            </MovieTitle>
+          </NavigationLink>
         </div>
         <Navigation />
         <Search />
