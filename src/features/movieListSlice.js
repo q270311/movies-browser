@@ -25,6 +25,7 @@ const movieListSlice = createSlice({
         },
         setQuery: (state, { payload }) => {
             state.query = payload.query;
+            state.status="loading";
         },
         goToPage: (state, { payload }) => {
             state.page = payload.page;
