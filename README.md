@@ -23,10 +23,8 @@ https://q270311.github.io/movies-browser/
  - localStorage
  - BEM convention
 - Layout: flex | grid
-### Preview
 
-
-## Available Scripts
+### Available Scripts
 
 In the project directory, you can run:
 
