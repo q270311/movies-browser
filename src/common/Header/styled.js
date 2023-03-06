@@ -6,7 +6,8 @@ export const Wrapper = styled.div`
   justify-content: center;
   padding: 16px;
   width: 100%;
-  height: auto;
+  min-width: 320px;
+  height: 94px;
   background: ${({ theme }) => theme.color.black};
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
