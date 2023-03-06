@@ -12,11 +12,6 @@ export const NavList = styled.ul`
 `;
 
 export const NavItems = styled.li`
-  padding: 0 35px 0 40px;
-  width: 54px;
-  height: 21px;
-  font-family: "Poppins";
-  font-style: normal;
   font-weight: 600;
   font-size: 14px;
   line-height: 21px;
