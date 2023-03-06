@@ -17,6 +17,7 @@ export const NavItems = styled.li`
   line-height: 21px;
   text-transform: uppercase;
   color: ${({ theme }) => theme.color.white};
+  padding: 12px 24px;
 
   ${({ primary }) =>
     primary &&
