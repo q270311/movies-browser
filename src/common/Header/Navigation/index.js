@@ -14,10 +14,20 @@ const Navigation = () => {
     <StyledNavigation>
       <NavList>
         <NavigationLink to={toMoviesList()}>
-          <NavItems primary>Movies</NavItems>
+          <NavItems
+            primary={selectedItem === "movies"}
+            onClick={() => handleClick("movies")}
+          >
+            Movies
+          </NavItems>
         </NavigationLink>
         <NavigationLink to={toPeopleList()}>
-          <NavItems>People</NavItems>
+          <NavItems
+            primary={selectedItem === "people-list"}
+            onClick={() => handleClick("people-list")}
+          >
+            People
+          </NavItems>
         </NavigationLink>
       </NavList>
     </StyledNavigation>
