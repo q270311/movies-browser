@@ -1,21 +1,15 @@
 import styled from "styled-components";
 
 export const SearchInput = styled.input`
-  font-family: "Poppins";
-  font-style: normal;
   color: ${({ theme }) => theme.color.grey};
   border: none;
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.5;
   background-color: transparent;
   outline: 0;
   padding: 0;
-  width: 100%;
-  height: 24px;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
-    width: 100%;
     height: 44px;
     border-radius: 33px;
   }
