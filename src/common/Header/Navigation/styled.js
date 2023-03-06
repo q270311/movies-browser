@@ -16,6 +16,9 @@ export const NavList = styled.ul`
 `;
 
 export const NavItems = styled.li`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 0 35px 0 40px;
   width: 54px;
   height: 21px;
@@ -30,11 +33,6 @@ export const NavItems = styled.li`
   ${({ primary }) =>
     primary &&
     css`
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      padding: 8px 24px;
-      gap: 10px;
       width: 102px;
       height: 48px;
       border: 1px solid ${({ theme }) => theme.color.white};
