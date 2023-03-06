@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-export const StyledHeader = styled.header`
+export const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
