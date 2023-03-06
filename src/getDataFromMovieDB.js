@@ -60,3 +60,11 @@ export const getPersonMovieCredits = async ({ personID }) => {
 
     return await response.data;
 };
+export const searchMovie = async ({ page, query }) => {
+    const response = await axios.get(`${baseURL}/search/movie?api_key=${apiKey}&language=en-US&query=${query}&page=${page}&include_adult=false`);
+    if (!response.ok) {
+        new Error(response.statusText);
+    }
+
+    return await response.data;
+};
