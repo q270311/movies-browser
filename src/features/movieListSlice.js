@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const movieListSlice = createSlice({
     name: "movieData",
     initialState: {
+        query: "",
         page: 1,
         totalPages: 0,
         totalResults: 0,
@@ -22,6 +23,9 @@ const movieListSlice = createSlice({
         fetchDataError: (state) => {
             state.status = "error";
         },
+        setQuery: (state, { payload }) => {
+            state.query = payload.query;
+        },
         goToPage: (state, { payload }) => {
             state.page = payload.page;
         },
@@ -30,6 +34,7 @@ const movieListSlice = createSlice({
 export const {
     fetchDataSuccess,
     fetchDataError,
+    setQuery,
     goToPage,
 } = movieListSlice.actions;
 
@@ -39,6 +44,7 @@ export const selectTotalPages = (state) => selectMovieListState(state).totalPage
 export const selectTotalResults = (state) => selectMovieListState(state).totalResults;
 export const selectMovies = (state) => selectMovieListState(state).movies;
 export const selectGenres = (state) => selectMovieListState(state).genres;
+export const selectQuery = (state) => selectMovieListState(state).query;
 export const selectStatus = (state) => selectMovieListState(state).status;
 
 export default movieListSlice.reducer;
