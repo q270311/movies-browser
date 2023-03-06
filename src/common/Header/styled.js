@@ -52,8 +52,4 @@ export const NavigationLink = styled(NavLink)`
   text-decoration: none;
   gap: 16px;
   flex-wrap: wrap;
-
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
-    padding-left: 15px;
-  }
 `;
