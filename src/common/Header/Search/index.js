@@ -3,8 +3,8 @@ import search from "./search.svg";
 import {
   useQueryParameter,
   useReplaceQueryParameter,
-} from "../queryParameters";
-import searchQueryParamName from "../searchQueryParamName.js";
+} from "../../../features/queryParameters";
+import searchQueryParamName from "../../../features/searchQueryParamName.js";
 import { useLocation } from "react-router";
 
 const Search = () => {
