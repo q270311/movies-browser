@@ -1,14 +1,18 @@
 ## 🎬 Movies Browser - group project
-![Movies Browser](https://user-images.githubusercontent.com/105354955/223079927-50c378fe-52b0-41e8-960e-25a959c2ce5f.gif)
+<img src="https://user-images.githubusercontent.com/105354955/223079927-50c378fe-52b0-41e8-960e-25a959c2ce5f.gif" width="450"/>
+
 ### Description 
 Here, you can easily search for your favorite movies, actors and get detailed information about the film and its cast. Our database includes a wide selection of movies from various genres. 
+
 ### Demo
 https://q270311.github.io/movies-browser/
+
 ### Contributors
 > The project was created by enthusiasts:
 - 👩‍💻 Klaudia Kępka
 - 👩‍💻 Joanna Panimasz
 - 👨‍💻 Michał Bałdyga
+
 ### Tech stack
 [![My Skills](https://skillicons.dev/icons?i=js,react,html,css,redux,git,github)](https://skillicons.dev)
 > More details about tech:
