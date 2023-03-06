@@ -34,8 +34,6 @@ export const NavItems = styled.li`
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
     font-size: 12px;
     line-height: 18px;
-    padding: 8px 12px;
-    width: 70px;
-    height: 34px;
+    padding: 10px 15px;
   }
 `;
