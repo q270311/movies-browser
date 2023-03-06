@@ -1,38 +1,42 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-export const StyledHeader = styled.header`
+export const Wrapper = styled.div`
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
   padding: 16px;
   width: 100%;
-  height: auto;
+  min-width: 320px;
+  height: 94px;
   background: ${({ theme }) => theme.color.black};
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
-    overflow: hidden;
-    hight: 142px;
-    flex-wrap: wrap;
-    padding: 18px;
-    width: 100%;
+    height: 142px;
   }
+`;
+
+export const StyledHeader = styled.header`
+  width: 1400px;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
 `;
 
 export const Video = styled.img`
   width: 40px;
   height: 40px;
 
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
-    width: 18px;
+  @media (max-width: ${({ theme }) => theme.breakpoint.tabletDevice}px) {
+    width: 30px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.smallDevice}px) {
+    width: 15px;
   }
 `;
 
 export const MovieTitle = styled.h1`
-  width: 168px;
-  height: 40px;
-  font-family: "Poppins";
-  font-style: normal;
   font-weight: 500;
   font-size: 24px;
   line-height: 40px;
@@ -41,9 +45,12 @@ export const MovieTitle = styled.h1`
   color: ${({ theme }) => theme.color.white};
   margin: 0;
 
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoint.tabletDevice}px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.smallDevice}px) {
     font-size: 13px;
-    width: 90px;
   }
 `;
 
@@ -52,8 +59,4 @@ export const NavigationLink = styled(NavLink)`
   text-decoration: none;
   gap: 16px;
   flex-wrap: wrap;
-
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
-    padding-left: 15px;
-  }
 `;
