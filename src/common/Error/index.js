@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Wrapper, ErrorIcon, Title, Subtitle, Button } from "./styled";
 import { MainWrapper } from "../MainWrapper";
-import { toMoviesList } from "../../routes";
+import { toMoviesList } from "../../core/routes";
 
 export const Error = () => {
   return (

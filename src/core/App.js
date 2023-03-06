@@ -1,9 +1,9 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { toMovieDetails, toMoviesList, toPeopleList, toPersonDetails } from "./routes";
-import MoviesList from "./features/moviesList";
-import PeopleList from "./features/peopleList";
-import MovieDetails  from './features/movieDetails';
-import PersonDetails  from './features/personDetails';
+import MoviesList from "../features/moviesList";
+import PeopleList from "../features/peopleList";
+import MovieDetails  from '../features/movieDetails';
+import PersonDetails from '../features/personDetails';
 
 function App() {
   return (
