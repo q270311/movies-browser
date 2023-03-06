@@ -6,7 +6,7 @@ export const NavList = styled.ul`
   display: flex;
   align-items: center;
   list-style-type: none;
-  padding: 0 311px 0 80px;
+  padding: 0 120px 0 80px;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
     padding: 20px 10px 20px 0;
