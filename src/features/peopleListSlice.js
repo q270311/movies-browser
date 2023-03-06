@@ -21,6 +21,7 @@ const peopleListSlice = createSlice({
             state.status = "error";
         },
         goToPage: (state, { payload }) => {
+            state.status="loading";
             state.page = payload.page;
         },
     },
