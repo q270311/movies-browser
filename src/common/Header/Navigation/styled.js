@@ -25,10 +25,8 @@ export const NavItems = styled.li`
       display: flex;
       flex-direction: row;
       align-items: center;
-      padding: 8px 24px;
       gap: 10px;
-      width: 102px;
-      height: 48px;
+      width: 100%;
       border: 1px solid ${({ theme }) => theme.color.white};
       border-radius: 24px;
     `}
