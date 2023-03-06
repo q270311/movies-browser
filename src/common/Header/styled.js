@@ -27,8 +27,12 @@ export const Video = styled.img`
   width: 40px;
   height: 40px;
 
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
-    width: 18px;
+  @media (max-width: ${({ theme }) => theme.breakpoint.tabletDevice}px) {
+    width: 30px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoint.smallDevice}px) {
+    width: 15px;
   }
 `;
 
