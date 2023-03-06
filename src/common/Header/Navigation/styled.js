@@ -6,7 +6,7 @@ export const NavList = styled.ul`
   display: flex;
   align-items: center;
   list-style-type: none;
-  padding: 0 120px 0 80px;
+  padding: 0 311px 0 80px;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
     padding: 20px 10px 20px 0;
@@ -16,10 +16,7 @@ export const NavList = styled.ul`
 `;
 
 export const NavItems = styled.li`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 50px 0 50px;
+  padding: 0 35px 0 40px;
   width: 54px;
   height: 21px;
   font-family: "Poppins";
@@ -33,6 +30,11 @@ export const NavItems = styled.li`
   ${({ primary }) =>
     primary &&
     css`
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 8px 24px;
+      gap: 10px;
       width: 102px;
       height: 48px;
       border: 1px solid ${({ theme }) => theme.color.white};
