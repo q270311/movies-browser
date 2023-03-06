@@ -19,7 +19,7 @@ export const NavItems = styled.li`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 35px 0 40px;
+  padding: 0 50px 0 50px;
   width: 54px;
   height: 21px;
   font-family: "Poppins";
