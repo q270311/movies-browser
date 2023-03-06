@@ -6,13 +6,9 @@ export const NavList = styled.ul`
   display: flex;
   align-items: center;
   list-style-type: none;
-  padding: 0 311px 0 80px;
-
-  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
-    padding: 20px 10px 20px 0;
-    margin: 0;
-    gap: 10px;
-  }
+  margin: 0;
+  padding: 0;
+  gap: 10px;
 `;
 
 export const NavItems = styled.li`
