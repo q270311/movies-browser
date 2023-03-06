@@ -1,34 +1,30 @@
-
-
-# Movies Browser
-## Demo
+## 🎬 Movies Browser - group project
+![Movies Browser](https://user-images.githubusercontent.com/105354955/223079927-50c378fe-52b0-41e8-960e-25a959c2ce5f.gif)
+### Description 
+Here, you can easily search for your favorite movies, actors and get detailed information about the film and its cast. Our database includes a wide selection of movies from various genres. 
+### Demo
 https://q270311.github.io/movies-browser/
-
-## Description 
-Project implemented during the _Frontend Developer od podstaw_ course at the **YouCode** -  online programming school.
-
-This application is made in a **group of developers**, and is the culmination of the course.
-
-
-## Technologies
- - HTML
- - CSS
- - BEM convention
- - Flex, Grid
- - JavaScript
+### Contributors
+> The project was created by enthusiasts:
+- 👩‍💻 Klaudia Kępka
+- 👩‍💻 Joanna Panimasz
+- 👨‍💻 Michał Bałdyga
+### Tech stack
+[![My Skills](https://skillicons.dev/icons?i=js,react,html,css,redux,git,github)](https://skillicons.dev)
+> More details about tech:
+ - React.js 
+   - hooks: useState, useEffect, useRef, custom hooks
+   - styled components
+   - router v6
+ - Redux | Redux Saga | Redux Toolkit
  - ES6+ features
- - React.js
- - React Hooks: useState, useEffect, useRef, own Reaact Hooks
- - Redux
- - Styled components
- - JS axios async/await function
+ - JS axios async/await
  - JS Generator
- - Redux-Saga
- - reading/writing data to localStorage
- - React Router
+ - localStorage
+ - BEM convention
+- Layout: flex | grid
+### Preview
 
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
