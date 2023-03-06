@@ -11,11 +11,7 @@ export const Wrapper = styled.div`
   background: ${({ theme }) => theme.color.black};
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
-    overflow: hidden;
-    hight: 142px;
-    flex-wrap: wrap;
-    padding: 18px;
-    width: 100%;
+    height: 142px;
   }
 `;
 
