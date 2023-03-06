@@ -31,9 +31,13 @@ export const SearchWrapper = styled.div`
   height: 48px;
   border: 0;
 
+  @media (max-width: ${({ theme }) => theme.breakpoint.tabletDevice}px) {
+    width: 300px;
+  }
+
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
     width: 100%;
     height: 44px;
-    border-radius: 33px;
+    max-width: none;
   }
 `;
