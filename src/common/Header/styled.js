@@ -15,6 +15,14 @@ export const Wrapper = styled.div`
   }
 `;
 
+export const StyledHeader = styled.header`
+  width: 1400px;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+`;
+
 export const Video = styled.img`
   width: 40px;
   height: 40px;
