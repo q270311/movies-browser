@@ -37,10 +37,6 @@ export const Video = styled.img`
 `;
 
 export const MovieTitle = styled.h1`
-  width: 168px;
-  height: 40px;
-  font-family: "Poppins";
-  font-style: normal;
   font-weight: 500;
   font-size: 24px;
   line-height: 40px;
