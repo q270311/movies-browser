@@ -4,8 +4,6 @@ import { toPeopleList, toMoviesList } from "../../../core/routes";
 import { useState } from "react";
 
 const Navigation = () => {
-  const [selectedItem, setSelectedItem] = useState("movies");
-
   
   return (
     <StyledNavigation>
