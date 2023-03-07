@@ -1,4 +1,5 @@
 import { SearchIcon, SearchInput, SearchWrapper } from "./styled";
+import { toPeopleList, toMoviesList } from "../../../core/routes";
 import search from "./search.svg";
 import {
   useQueryParameter,
@@ -22,6 +23,7 @@ const Search = () => {
       setWait(false);
       setTimeout(() => {
         replaceQueryParameter({
+          baseUrl: location.pathname.includes("movie") ? toMoviesList() : toPeopleList(),
           key: searchQueryParamName,
           value: target.value.trim() !== "" ? target.value : undefined,
         });
@@ -36,11 +38,10 @@ const Search = () => {
       <SearchInput
         onChange={onInputChange}
         value={query || ""}
-        placeholder={`${
-          location.pathname.includes("movies")
-            ? "Search for movies..."
-            : " Search for people..."
-        }`}
+        placeholder={`${location.pathname.includes("movie")
+          ? "Search for movies..."
+          : " Search for people..."
+          }`}
       />
     </SearchWrapper>
   );
