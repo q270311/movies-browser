@@ -51,7 +51,7 @@ const MovieDetails = () => {
                     }
                     content={
                         <MovieDescriptionTile
-                            posterPath={`${secureBaseUrl}${details.poster_path}`}
+                            posterPath={details.poster_path}
                             title={details.original_title}
                             year={(details.release_date || "").substring(0, 4)}
                             genres={
