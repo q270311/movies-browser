@@ -1,7 +1,6 @@
 import { StyledNavigation, NavList, NavItems } from "./styled";
 import { NavigationLink } from "../styled";
 import { toPeopleList, toMoviesList } from "../../../core/routes";
-import { useState } from "react";
 import { useLocation } from "react-router";
 
 const Navigation = () => {
