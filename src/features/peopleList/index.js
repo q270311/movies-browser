@@ -32,7 +32,8 @@ const PeopleList = () => {
             status === "error" ?
                 <Error /> :
                 <>
-                    {totalResults === 0 ? <NoResults query={query} /> :
+                    {totalResults === 0 ?
+                        <NoResults query={query} /> :
                         (<>
                             <MainWrapper
                                 content={
