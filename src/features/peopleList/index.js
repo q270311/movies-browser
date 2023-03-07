@@ -1,6 +1,9 @@
 import { useSelector, useDispatch } from "react-redux";
+import {useEffect} from "react";
 import { Wrapper } from "./styled";
-import { selectPeople, selectStatus, selectPage, selectTotalPages, goToPage } from '../peopleListSlice';
+import { selectPeople, selectStatus, selectPage, selectTotalPages, goToPage, selectTotalResults, setQuery } from '../peopleListSlice';
+import searchQueryParamName from "../searchQueryParamName";
+import { useQueryParameter } from "../queryParameters";
 import Loader from "../../common/Loader";
 import { Error } from "../../common/Error";
 import { MainWrapper } from "../../common/MainWrapper";
@@ -9,11 +12,18 @@ import PersonTile from "../../common/Tiles/PersonTile";
 
 
 const PeopleList = () => {
+    const query = useQueryParameter(searchQueryParamName);
     const popularPeople = useSelector(selectPeople);
     const status = useSelector(selectStatus);
     const pageNumber = useSelector(selectPage);
     const totalPages = useSelector(selectTotalPages);
+    const totalResults = useSelector(selectTotalResults);
     const dispatch = useDispatch();
+
+    useEffect(() => {
+        query ? dispatch(setQuery({ query: query })) : dispatch(setQuery({ query: "" }));
+        dispatch(goToPage({ page: 1 }));
+    }, [query, dispatch]);
 
     return (
         status === "loading" ?
@@ -34,7 +44,10 @@ const PeopleList = () => {
                                 ))}
                             </Wrapper>
                         }
-                        title={"Popular people"}
+                        title={
+                            query ? `Search results for "${query}" (${totalResults})` :
+                            `Popular people`
+                        }
                     />
                     <Pagination
                         pageNumber={pageNumber}
