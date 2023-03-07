@@ -3,47 +3,60 @@ import star from "./star.svg";
 
 export const Votes = ({ voteAverage, voteCount }) => (
   <Wrapper>
-    <Vote>
-      <Star
-        src={star}
-        alt="star_icon"
-      />
-    </Vote>
-    <Vote
-      average
-    >
-      {voteAverage}
-    </Vote>
-    <Vote
-      count
-    >
-      {voteCount} votes
-    </Vote>
+    {voteAverage ? (
+      <>
+        <Vote>
+          <Star
+            src={star}
+            alt="star_icon"
+          />
+        </Vote>
+        <Vote
+          average
+        >
+          {voteAverage}
+        </Vote>
+        <Vote
+          count
+        >
+          {voteCount} votes
+        </Vote>
+      </>
+    )
+      :
+      <Vote count>No votes yet</Vote>
+    }
   </Wrapper>
 );
 
 export const ExtendedVotes = ({ voteAverage, voteCount }) => (
   <Wrapper>
-    <Vote>
-      <Star
-        src={star}
-        alt=""
-      />
-    </Vote>
-    <Vote
-      average
-      extended
-    >
-      {voteAverage}
-    </Vote>
-    <Total>
-      /10
-    </Total>
-    <Vote
-      smaller
-    >
-      {voteCount} votes
-    </Vote>
+    {voteAverage ? (
+      <>
+        <Vote>
+          <Star
+            src={star}
+            alt=""
+          />
+        </Vote>
+        <Vote
+          average
+          extended
+        >
+          {voteAverage}
+        </Vote>
+        <Total>
+          /10
+        </Total>
+        <Vote
+          smaller
+        >
+          {voteCount} votes
+        </Vote>
+      </>)
+      :
+      <Vote>No votes yet</Vote>
+    }
   </Wrapper>
 );
 
