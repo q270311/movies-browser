@@ -6,17 +6,28 @@ import {
 } from "../../../features/queryParameters";
 import searchQueryParamName from "../../../features/searchQueryParamName.js";
 import { useLocation } from "react-router";
+import { useState } from "react";
 
 const Search = () => {
-  const query = useQueryParameter(searchQueryParamName);
+  const queryURL = useQueryParameter(searchQueryParamName);
   const replaceQueryParameter = useReplaceQueryParameter();
   const location = useLocation();
+  const [query, setQuery] = useState(queryURL);
+  const [wait, setWait] = useState(true);
 
   const onInputChange = ({ target }) => {
-    replaceQueryParameter({
-      key: searchQueryParamName,
-      value: target.value.trim() !== "" ? target.value : undefined,
-    });
+    setQuery(target.value);
+
+    if (wait) {
+      setWait(false);
+      setTimeout(() => {
+        replaceQueryParameter({
+          key: searchQueryParamName,
+          value: target.value.trim() !== "" ? target.value : undefined,
+        });
+        setWait(true);
+      }, 3000);
+    }
   };
 
   return (
