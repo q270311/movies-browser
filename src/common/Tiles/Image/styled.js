@@ -15,4 +15,5 @@ export const Poster = styled.img`
   width: 100%;
   height: auto;
   border-radius: 5px;
+  aspect-ratio: 2/3;
 `;

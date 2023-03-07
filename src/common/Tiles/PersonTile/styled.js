@@ -49,6 +49,8 @@ export const PersonSubtitle = styled.p`
 export const PersonImage = styled.img`
   width: 100%;
   border-radius: 5px;
+  aspect-ratio: 2/3;
+  object-fit: cover;
 `;
 
 export const PersonLink = styled(NavLink)`

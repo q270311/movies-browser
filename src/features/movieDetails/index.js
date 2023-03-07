@@ -41,16 +41,17 @@ const MovieDetails = () => {
                                     alt="backdrop"
                                 />
                             </PosterWrapper>
+                            {details.vote_count && (
                             <BackdropVotes
                                 voteAverage={details.vote_average}
                                 voteCount={details.vote_count}
-                            />
+                            />)}
                         </BackdropWrapper>
                     )
                     }
                     content={
                         <MovieDescriptionTile
-                            posterPath={`${secureBaseUrl}${details.poster_path}`}
+                            posterPath={details.poster_path}
                             title={details.original_title}
                             year={(details.release_date || "").substring(0, 4)}
                             genres={
@@ -63,8 +64,9 @@ const MovieDetails = () => {
                             secondValue={details.release_date}
                         />
                     }
-                    firstSubtitle={`Cast (${cast.length})`}
+                    firstSubtitle={ cast.length === 0 ? "" : `Cast (${cast.length})`}
                     firstSection={
+                        cast.length === 0 ? "" :
                         <Wrapper>
                             {cast.map(person => (
                                 <PersonTile
@@ -77,8 +79,9 @@ const MovieDetails = () => {
                             ))}
                         </Wrapper>
                     }
-                    secondSubtitle={`Crew (${crew.length})`}
+                    secondSubtitle={ crew.length === 0 ? "" : `Crew (${crew.length})`}
                     secondSection={
+                        crew.length === 0 ? "" :
                         <Wrapper>
                             {crew.map(person => (
                                 <PersonTile

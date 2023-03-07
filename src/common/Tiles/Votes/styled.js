@@ -35,6 +35,7 @@ export const Vote = styled.p`
 
   ${({ count }) => count && css`
     color: ${({ theme }) => theme.color.waterloo};
+    flex: none;
   `}
 
   ${({ extended }) => extended && css`
