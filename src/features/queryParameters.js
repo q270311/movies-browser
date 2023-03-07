@@ -10,7 +10,7 @@ export const useReplaceQueryParameter = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  return ({ key, value }) => {
+  return ({ baseUrl, key, value }) => {
     const searchParams = new URLSearchParams(location.search);
 
     if (value === undefined) {
@@ -18,8 +18,7 @@ export const useReplaceQueryParameter = () => {
     } else {
       searchParams.set(key, value);
     }
-
     const newSearch = searchParams.toString();
-    navigate(`${location.pathname}?${newSearch}`);
+    navigate(`${baseUrl}?${newSearch}`);
   };
 };
