@@ -6,10 +6,7 @@ import { useState } from "react";
 const Navigation = () => {
   const [selectedItem, setSelectedItem] = useState("movies");
 
-  const handleClick = (item) => {
-    setSelectedItem(item);
-  };
-
+  
   return (
     <StyledNavigation>
       <NavList>
