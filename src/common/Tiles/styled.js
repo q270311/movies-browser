@@ -10,7 +10,8 @@ export const Tile = styled.div`
   border-radius: 5px;
   padding: 16px;
   transition: all 1s linear;
-
+  grid-template-rows: auto 1fr;
+  
   &:hover {
     transform: scale(1.05)
   }
@@ -42,7 +43,7 @@ export const Tile = styled.div`
 `;
 
 export const Description = styled.div`
-  height: 200px;
+  height: 225px;
   display: flex;
   flex-direction: column;
 
