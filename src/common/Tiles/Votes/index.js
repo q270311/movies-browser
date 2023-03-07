@@ -43,7 +43,7 @@ export const ExtendedVotes = ({ voteAverage, voteCount }) => (
           average
           extended
         >
-          {voteAverage}
+          {voteAverage.toFixed(1)}
         </Vote>
         <Total>
           /10
@@ -76,7 +76,7 @@ export const BackdropVotes = ({ voteAverage, voteCount }) => (
         big
         backdrop
       >
-        {voteAverage}
+        {voteAverage.toFixed(1)}
       </Vote>
       <Total
         backdrop
