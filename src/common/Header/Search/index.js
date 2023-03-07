@@ -14,12 +14,12 @@ const Search = () => {
   const replaceQueryParameter = useReplaceQueryParameter();
   const location = useLocation();
   const [query, setQuery] = useState(queryURL);
-  const [wait, setWait] = useState(true);
+  const [isWait, setWait] = useState(true);
 
   const onInputChange = ({ target }) => {
     setQuery(target.value);
 
-    if (wait) {
+    if (isWait) {
       setWait(false);
       setTimeout(() => {
         replaceQueryParameter({
@@ -28,7 +28,7 @@ const Search = () => {
           value: target.value.trim() !== "" ? target.value : undefined,
         });
         setWait(true);
-      }, 3000);
+      }, 2000);
     }
   };
 
