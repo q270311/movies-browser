@@ -3,12 +3,14 @@ import { nanoid } from "@reduxjs/toolkit";
 
 export const Genres = ({ genres }) => {
   return (
-    <Wrapper>
-      {genres.map(genre => (
+    genres && (
+      <Wrapper>
+        {genres.map(genre => (
           <Genre key={nanoid()}>
             {genre}
           </Genre>
         ))}
-    </Wrapper>
+      </Wrapper>
+    )
   )
 };
