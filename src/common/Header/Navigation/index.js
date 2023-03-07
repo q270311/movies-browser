@@ -5,22 +5,26 @@ import { useLocation } from "react-router";
 
 const Navigation = () => {
   const location = useLocation();
-  
+
   return (
     <StyledNavigation>
       <NavList>
         <NavigationLink to={toMoviesList()}>
           <NavItems
-            primary={selectedItem === "movies"}
-            onClick={() => handleClick("movies")}
+            primary={
+              location.pathname === toMoviesList() ||
+              location.pathname.includes("movie")
+            }
           >
             Movies
           </NavItems>
         </NavigationLink>
         <NavigationLink to={toPeopleList()}>
           <NavItems
-            primary={selectedItem === "people-list"}
-            onClick={() => handleClick("people-list")}
+            primary={
+              location.pathname === toPeopleList() ||
+              location.pathname.includes("person")
+            }
           >
             People
           </NavItems>
