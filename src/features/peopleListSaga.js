@@ -19,6 +19,5 @@ function* fetchPersonPopularHandler() {
 }
 
 export function* watchFetchPersonPopular() {
-    yield fetchPersonPopularHandler();
     yield takeLatest(goToPage.type, fetchPersonPopularHandler);
 }

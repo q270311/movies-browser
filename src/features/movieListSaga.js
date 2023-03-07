@@ -20,6 +20,5 @@ function* fetchMoviePopularHandler() {
 }
 
 export function* watchFetchMoviePopular() {
-    yield fetchMoviePopularHandler();
     yield takeLatest(goToPage.type, fetchMoviePopularHandler);
 }
