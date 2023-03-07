@@ -63,8 +63,9 @@ const MovieDetails = () => {
                             secondValue={details.release_date}
                         />
                     }
-                    firstSubtitle={`Cast (${cast.length})`}
+                    firstSubtitle={ cast.length === 0 ? "" : `Cast (${cast.length})`}
                     firstSection={
+                        cast.length === 0 ? "" :
                         <Wrapper>
                             {cast.map(person => (
                                 <PersonTile
@@ -77,8 +78,9 @@ const MovieDetails = () => {
                             ))}
                         </Wrapper>
                     }
-                    secondSubtitle={`Crew (${crew.length})`}
+                    secondSubtitle={ crew.length === 0 ? "" : `Crew (${crew.length})`}
                     secondSection={
+                        crew.length === 0 ? "" :
                         <Wrapper>
                             {crew.map(person => (
                                 <PersonTile
