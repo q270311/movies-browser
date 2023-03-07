@@ -1,30 +1,30 @@
 import { StyledNavigation, NavList, NavItems } from "./styled";
 import { NavigationLink } from "../styled";
 import { toPeopleList, toMoviesList } from "../../../core/routes";
-import { useState } from "react";
+import { useLocation } from "react-router";
 
 const Navigation = () => {
-  const [selectedItem, setSelectedItem] = useState("movies");
-
-  const handleClick = (item) => {
-    setSelectedItem(item);
-  };
+  const location = useLocation();
 
   return (
     <StyledNavigation>
       <NavList>
         <NavigationLink to={toMoviesList()}>
           <NavItems
-            primary={selectedItem === "movies"}
-            onClick={() => handleClick("movies")}
+            primary={
+              location.pathname === toMoviesList() ||
+              location.pathname.includes("movie")
+            }
           >
             Movies
           </NavItems>
         </NavigationLink>
         <NavigationLink to={toPeopleList()}>
           <NavItems
-            primary={selectedItem === "people-list"}
-            onClick={() => handleClick("people-list")}
+            primary={
+              location.pathname === toPeopleList() ||
+              location.pathname.includes("person")
+            }
           >
             People
           </NavItems>
