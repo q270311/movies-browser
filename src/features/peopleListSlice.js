@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const peopleListSlice = createSlice({
     name: "peopleData",
     initialState: {
+        query: "",
         page: 1,
         totalPages: 0,
         totalResults: 0,
@@ -20,6 +21,10 @@ const peopleListSlice = createSlice({
         fetchDataError: (state) => {
             state.status = "error";
         },
+        setQuery: (state, { payload }) => {
+            state.query = payload.query;
+            state.status="loading";
+        },
         goToPage: (state, { payload }) => {
             state.status="loading";
             state.page = payload.page;
@@ -29,6 +34,7 @@ const peopleListSlice = createSlice({
 export const {
     fetchDataSuccess,
     fetchDataError,
+    setQuery,
     goToPage,
 } = peopleListSlice.actions;
 
@@ -37,6 +43,7 @@ export const selectPage = (state) => selectPeopleListState(state).page;
 export const selectTotalPages = (state) => selectPeopleListState(state).totalPages;
 export const selectTotalResults = (state) => selectPeopleListState(state).totalResults;
 export const selectPeople = (state) => selectPeopleListState(state).people;
+export const selectQuery = (state) => selectPeopleListState(state).query;
 export const selectStatus = (state) => selectPeopleListState(state).status;
 
 export default peopleListSlice.reducer;
