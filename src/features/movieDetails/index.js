@@ -41,10 +41,11 @@ const MovieDetails = () => {
                                     alt="backdrop"
                                 />
                             </PosterWrapper>
+                            {details.vote_count && (
                             <BackdropVotes
                                 voteAverage={details.vote_average}
                                 voteCount={details.vote_count}
-                            />
+                            />)}
                         </BackdropWrapper>
                     )
                     }
