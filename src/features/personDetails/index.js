@@ -44,8 +44,9 @@ export const PersonDetails = () => {
                             profilePath={details.profile_path}
                         />
                     }
-                    firstSubtitle={`Movies - cast (${cast.length})`}
+                    firstSubtitle={cast.length === 0 ? "" : `Movies - cast (${cast.length})`}
                     firstSection={
+                        cast.length === 0 ? "" :
                         <Wrapper>
                             {
                                 cast.map(film =>
@@ -67,8 +68,9 @@ export const PersonDetails = () => {
                             }
                         </Wrapper>
                     }
-                    secondSubtitle={`Movies - crew (${crew.length})`}
+                    secondSubtitle={ crew.length === 0 ? "" : `Movies - crew (${crew.length})`}
                     secondSection={
+                        crew.length === 0 ? "" :
                         <Wrapper>
                             {
                                 crew.map(film =>
