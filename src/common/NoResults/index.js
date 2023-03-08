@@ -1,7 +1,7 @@
 import { StyledIcon, Wrapper } from "./styled";
 import { MainWrapper } from "../MainWrapper"
 
-export const NoResults = () => (
+export const NoResults = ({ query }) => (
   <MainWrapper
     content={
       <Wrapper>
@@ -9,7 +9,7 @@ export const NoResults = () => (
       </Wrapper>
     }
     title={
-      "Sorry, there are no results for “{query}”"
+      `Sorry, there are no results for “${query}”`
     }
   />
 );

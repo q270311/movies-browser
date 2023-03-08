@@ -6,11 +6,12 @@ import { useQueryParameter } from "../queryParameters";
 import { Wrapper } from "./styled";
 import { Pagination } from "../../common/Pagination";
 import { MovieTile } from "../../common/Tiles";
-import { selectMovies, selectGenres, selectStatus, selectPage, selectTotalPages,selectTotalResults, setQuery, goToPage } from '../movieListSlice';
+import { selectMovies, selectGenres, selectStatus, selectPage, selectTotalPages, selectTotalResults, setQuery, goToPage } from '../movieListSlice';
 import Loader from "../../common/Loader";
 import { Error } from "../../common/Error";
 import { MainWrapper } from "../../common/MainWrapper";
 import { StyledLink } from './styled';
+import { NoResults } from "../../common/NoResults";
 
 const getGenresNames = ({ ids, dictionary }) =>
     ids.map(ids =>
@@ -39,40 +40,45 @@ const MoviesList = () => {
             status === "error" ?
                 <Error /> :
                 <>
-                    <MainWrapper
-                        content={
-                            <Wrapper>
-                                {popularMovies.map(movie => (
-                                    <StyledLink
-                                        to={`/movie/${movie.id}`}
-                                        key={nanoid()}
-                                    >
-                                        <MovieTile
-                                            key={nanoid()}
-                                            posterPath={movie.poster_path}
-                                            title={movie.title}
-                                            year={(movie.release_date || "").substring(0, 4)}
-                                            genres={getGenresNames({ ids: movie.genre_ids, dictionary: genresDictionary })}
-                                            voteAverage={movie.vote_average}
-                                            voteCount={movie.vote_count}
-                                        />
-                                    </StyledLink>
-                                ))}
-                            </Wrapper>
-                        }
-                        title={
-                            query ? `Search results for "${query}" (${totalResults})` :
-                            `Popular movies`
-                        }
-                    />
-                    <Pagination
-                        pageNumber={pageNumber}
-                        totalPages={totalPages}
-                        goToFirstPage={() => dispatch(goToPage({ page: 1 }))}
-                        goToNextPage={() => dispatch(goToPage({ page: pageNumber + 1 }))}
-                        goToPreviousPage={() => dispatch(goToPage({ page: pageNumber - 1 }))}
-                        goToLastPage={() => dispatch(goToPage({ page: totalPages }))}
-                    />
+                    {totalResults === 0 ?
+                        <NoResults query={query} /> :
+                        (<>
+                            <MainWrapper
+                                content={
+                                    <Wrapper>
+                                        {popularMovies.map(movie => (
+                                            <StyledLink
+                                                to={`/movie/${movie.id}`}
+                                                key={nanoid()}
+                                            >
+                                                <MovieTile
+                                                    key={nanoid()}
+                                                    posterPath={movie.poster_path}
+                                                    title={movie.title}
+                                                    year={(movie.release_date || "").substring(0, 4)}
+                                                    genres={getGenresNames({ ids: movie.genre_ids, dictionary: genresDictionary })}
+                                                    voteAverage={movie.vote_average}
+                                                    voteCount={movie.vote_count}
+                                                />
+                                            </StyledLink>
+                                        ))}
+                                    </Wrapper>
+                                }
+                                title={
+                                    query ? `Search results for "${query}" (${totalResults})` :
+                                        `Popular movies`
+                                }
+                            />
+                            <Pagination
+                                pageNumber={pageNumber}
+                                totalPages={totalPages}
+                                goToFirstPage={() => dispatch(goToPage({ page: 1 }))}
+                                goToNextPage={() => dispatch(goToPage({ page: pageNumber + 1 }))}
+                                goToPreviousPage={() => dispatch(goToPage({ page: pageNumber - 1 }))}
+                                goToLastPage={() => dispatch(goToPage({ page: totalPages }))}
+                            />
+                        </>
+                        )}
                 </>
     );
 };
