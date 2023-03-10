@@ -46,6 +46,7 @@ export const Vote = styled.p`
   ${({ smaller }) => smaller && css`
     color: ${({ theme }) => theme.color.black};
     font-size: 14px;
+    flex: none;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
     color: ${({ theme }) => theme.color.waterloo};
