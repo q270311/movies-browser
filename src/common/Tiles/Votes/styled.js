@@ -4,6 +4,7 @@ export const Wrapper = styled.div`
   display: flex;
   height: 100%;
   gap: 12px;
+  flex-wrap: wrap;
 
   ${({ backdrop }) => backdrop && css`
     color: ${({ theme }) => theme.color.white};
