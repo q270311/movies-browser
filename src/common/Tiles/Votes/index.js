@@ -14,7 +14,7 @@ export const Votes = ({ voteAverage, voteCount }) => (
         <Vote
           average
         >
-          {voteAverage}
+          {voteAverage.toFixed(1)}
         </Vote>
         <Vote
           count
