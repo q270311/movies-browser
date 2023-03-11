@@ -4,7 +4,12 @@ export const Wrapper = styled.div`
   display: flex;
   height: 100%;
   gap: 12px;
+  flex-wrap: wrap;
 
+  @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
+    gap: 6px;
+  }
+  
   ${({ backdrop }) => backdrop && css`
     color: ${({ theme }) => theme.color.white};
     flex-direction: column;
@@ -46,6 +51,7 @@ export const Vote = styled.p`
   ${({ smaller }) => smaller && css`
     color: ${({ theme }) => theme.color.black};
     font-size: 14px;
+    flex: none;
 
   @media (max-width: ${({ theme }) => theme.breakpoint.mobileDevice}px) {
     color: ${({ theme }) => theme.color.waterloo};

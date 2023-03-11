@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const BackdropWrapper = styled.div`
   width: 100%;
-  min-width: 280px;
+  min-width: 320px;
   display: flex;
   margin: 0 auto;
   justify-content: center;
