@@ -1,6 +1,6 @@
 import { call, put, takeLatest, select } from "redux-saga/effects";
 import { fetchDataSuccess, fetchDataError, getDetailsForMovie, selectMovieId } from "./movieSlice";
-import { getMovieDetails, getMovieCredits } from "../getDataFromMovieDB";
+import { getMovieDetails, getMovieCredits } from "./getDataFromMovieDB";
 
 function* fetchMovieDetailsHandler() {
     try {
